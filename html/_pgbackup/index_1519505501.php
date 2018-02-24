@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
-        <title>FaceFinder84</title>
+        <title>Bootstrap 3 Admin</title>
         <meta name="generator" content="Bootply" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet">
@@ -45,7 +45,7 @@
 </div>
                 <div class="col-md-8">
                     <center>
-                        <h1>Welcome to FaceFinder 84™</h1>
+                        <h1>Welcome to FaceFinder 84</h1>
                     </center>                     
                 </div>
             </div>
@@ -61,7 +61,7 @@
                     <br />
                     <br />
                     <h3>Please log in to continue<br><br></h3> 
-                    <p>Hello! Welcome to our Profhacks 2018 project. Our presentation is centered around FF84 or FaceFinder84™. A software designed to help law enforcement track down loose criminals.</p>
+                    <p>Hello! Welcome to our Profhacks 2018 project. Our presentation is centered around FF84 or FaceFinder84. A software designed to help law enforcement track down loose criminals.</p>
                 </div>
             </div>
             <!--/col-span-9-->
@@ -71,7 +71,7 @@
     </div>
     <!-- /Main -->
     <footer class="text-center">This service is provided by 
-        <a href="#"><strong>FaceFinder 84™</strong></a>
+        <a href="#"><strong>FaceFinder 84</strong></a>
     </footer>
     <!-- /.modal -->
     <!-- script references -->

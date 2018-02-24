@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
-        <title>FaceFinder84</title>
+        <title>Bootstrap 3 Admin</title>
         <meta name="generator" content="Bootply" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet">
@@ -45,33 +45,31 @@
 </div>
                 <div class="col-md-8">
                     <center>
-                        <h1>Welcome to FaceFinder 84™</h1>
+                        <h1>Welcome to FaceFinder 84</h1>
                     </center>                     
                 </div>
             </div>
-            <br />
-            <br />
             <div class="row">
-                <div class="col-md-7">
-                    <img src="./assets/img/header.jpg" width="100%" /> 
+                <div class="col-md-4">
+                    <h3>Column title</h3> 
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
                 </div>
-                <div class="col-md-1"> 
-</div>
-                <div class="col-md-3">
-                    <br />
-                    <br />
-                    <h3>Please log in to continue<br><br></h3> 
-                    <p>Hello! Welcome to our Profhacks 2018 project. Our presentation is centered around FF84 or FaceFinder84™. A software designed to help law enforcement track down loose criminals.</p>
+                <div class="col-md-4">
+                    <h3>Column title</h3> 
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
                 </div>
+            </div>
+            <div class="row">
+                <!-- /col-3 -->
+                <!--/row-->
+                <hr>
             </div>
             <!--/col-span-9-->
         </div>
-        <br />
-        <br />
     </div>
     <!-- /Main -->
     <footer class="text-center">This service is provided by 
-        <a href="#"><strong>FaceFinder 84™</strong></a>
+        <a href="#"><strong>FaceFinder 84</strong></a>
     </footer>
     <!-- /.modal -->
     <!-- script references -->
