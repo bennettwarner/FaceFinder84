@@ -3,7 +3,7 @@ class MailSender
 {
     public function sendMail($email, $user, $id, $type)
     {
-        require 'scripts/PHPMailer/PHPMailerAutoload.php';
+        //require 'scripts/PHPMailer/PHPMailerAutoload.php';
         include 'config.php';
 
         $finishedtext = $active_email;
@@ -15,18 +15,18 @@ class MailSender
 
         // Create a new PHPMailer object
         // ADD sendmail_path = "env -i /usr/sbin/sendmail -t -i" to php.ini on UNIX servers
-        $mail = new PHPMailer;
-        $mail->isHTML(true);
-        $mail->CharSet = "text/html; charset=UTF-8;";
-        $mail->WordWrap = 80;
-        $mail->setFrom($from_email, $from_name);
-        $mail->AddReplyTo($from_email, $from_name);
+        //$mail = new PHPMailer;
+        //$mail->isHTML(true);
+      //  $mail->CharSet = "text/html; charset=UTF-8;";
+      //  $mail->WordWrap = 80;
+      //  $mail->setFrom($from_email, $from_name);
+      //  $mail->AddReplyTo($from_email, $from_name);
         /****
         * Set who the message is to be sent to
         * CAN BE SET TO addAddress(youremail@website.com, 'Your Name') FOR PRIVATE USER APPROVAL BY MODERATOR
         * SET TO addAddress($email, $user) FOR USER SELF-VERIFICATION
         *****/
-        $mail->addAddress($email, $user);
+//$mail->addAddress($email, $user);
 
         //Sets message body content based on type (verification or confirmation)
         if ($type == 'Verify') {
