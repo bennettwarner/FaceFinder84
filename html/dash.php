@@ -29,11 +29,6 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
 
-                    <a class="navbar-brand" href="#">FaceFinder 84™</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-
                         <li class="dropdown">
                             <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> <?php echo $_SESSION['username'] ?> <span class="caret"></span></a>
                             <ul id="g-account-menu" class="dropdown-menu" role="menu">
