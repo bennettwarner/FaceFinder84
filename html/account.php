@@ -71,15 +71,15 @@
                                       <tr>        <td></td><td align="right"><p class="help-block">Your username cannot be changed.</p><br></td></tr>
                                       <tr>
                                                 <td align="right"><label for="email">Email Address &nbsp; &nbsp; &nbsp;</label><br><br></td>
-                                                <td><input type="text" class="input-large" id="email" value="rod.howard@example.com"><br><br></td>
+                                                <td><input type="text" class="input-large" id="email" placeholder="user@example.com"><br><br></td>
                                       </tr>
                                       <tr>
                                                 <td align="right"><label for="password1">Password &nbsp; &nbsp; &nbsp;</label><br><br></td>
-                                                <td><input type="password" class="input-medium" id="password1" value="password"><br><br></td>
+                                                <td><input type="password" class="input-medium" id="password1" placeholder="password"><br><br></td>
                                       </tr>
                                       <tr>
                                                 <td align="right"><label for="password2">Confirm &nbsp; &nbsp; &nbsp;</label><br><br></td>
-                                                <td><input type="password" class="input-medium" id="password2" value="password"><br><br></td>
+                                                <td><input type="password" class="input-medium" id="password2" placeholder="password"><br><br></td>
                                       </tr>
                                                 <br />
                                       <tr>
