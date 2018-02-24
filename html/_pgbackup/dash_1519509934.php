@@ -55,7 +55,7 @@
                     <ul class="nav nav-stacked">
                         <ul class="nav nav-stacked collapse in" id="userMenu">
                             <li class="active">
-                                <a href="/dash.php"><i class="glyphicon glyphicon-home"></i> Home</a>
+                                <a href="/"><i class="glyphicon glyphicon-home"></i> Home</a>
                             </li>
                             <li>
                                 <a href="#"><i class="glyphicon glyphicon-search"></i> New Case <span class="badge badge-info"></span></a>
@@ -71,11 +71,11 @@
                                 <a href="#"><i class="glyphicon glyphicon-flag"></i> Audit</a>
                             </li>
                             <li>
-                                <a href="./account.php"><i class="glyphicon glyphicon-user"></i> Account</a>
+                                <a href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;Account</a>
                             </li>
                             <li></li>
                             <li>
-                                <a href="./login/logout.php"><i class="glyphicon glyphicon-off"></i> Logout</a>
+                                <a href="#"><i class="glyphicon glyphicon-off"></i> Logout</a>
                             </li>
                         </ul>
                     </ul>

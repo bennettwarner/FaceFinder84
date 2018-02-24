@@ -53,9 +53,7 @@
             <br />
             <div class="row">
                 <div class="col-md-7">
-                    <center>
-                        <img src="./assets/img/header.jpg" width="80%" />
-                    </center>                     
+                    <img src="./assets/img/header.jpg" width="100%" /> 
                 </div>
                 <div class="col-md-1"> 
 </div>
