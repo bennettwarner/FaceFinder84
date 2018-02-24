@@ -22,7 +22,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Stream Platform</a>
+                    <a class="navbar-brand" href="#">FaceFinder 84™</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -54,8 +54,8 @@
                             </div>
                             <hr>
                             <div class="btn-group btn-group-justified">
-                                <a href="#" class="btn btn-primary col-sm-3"><i class="glyphicon glyphicon-plus"></i><br> Service</a>
-                                <a href="#" class="btn btn-primary col-sm-3"><i class="glyphicon glyphicon-cloud"></i><br> Cloud</a>
+                                <a href="#" class="btn btn-primary col-sm-3"><i class="glyphicon glyphicon-plus"></i><br> New Case</a>
+                                <a href="#" class="btn btn-primary col-sm-3"><i class="glyphicon glyphicon-cloud"></i><br> Database</a>
                                 <a href="#" class="btn btn-primary col-sm-3"><i class="glyphicon glyphicon-cog"></i><br> Tools</a>
                                 <a href="#" class="btn btn-primary col-sm-3"><i class="glyphicon glyphicon-question-sign"></i><br> Help</a>
                             </div>
