@@ -29,7 +29,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> <?php echo "Blue" ?> <span class="caret"></span></a>
+                            <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> <?php echo $_SESSION['username'] ?> <span class="caret"></span></a>
                             <ul id="g-account-menu" class="dropdown-menu" role="menu">
                                 <li>
                                     <a href="./account.php">Account Settings</a>
@@ -66,7 +66,7 @@
                                     <table cellspacing="10">
                                       <tr>
                                             <td align="right">  <label for="username">Username &nbsp; &nbsp; &nbsp;</label></td>
-                                            <td>  <input type="text" class="input-medium disabled" id="username" value="<?php echo $_SESSION['username'] ?>i" disabled></td>
+                                            <td>  <input type="text" class="input-medium disabled" id="username" value="<?php echo $_SESSION['username'] ?>" disabled></td>
                                       </tr>
                                       <tr>        <td></td><td align="right"><p class="help-block">Your username cannot be changed.</p><br></td></tr>
                                       <tr>
@@ -96,64 +96,6 @@
                             <!--/panel-->
                             <br>
                             <!--tabs-->
-                            <div class="panel">
-                                <ul class="nav nav-tabs" id="myTab">
-                                    <li class="active">
-                                        <a href="#profile" data-toggle="tab">Current Subscription Status</a>
-                                    </li>
-                                    <li>
-                                        <a href="#messages" data-toggle="tab">Add Subscription</a>
-                                    </li>
-                                    <li>
-                                        <a href="#settings" data-toggle="tab">Payment History</a>
-                                    </li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-pane active well" id="profile">
-                                        <h4><i class="glyphicon glyphicon-user"></i></h4> Lorem profile dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-                                        <p>Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis nisi.</p>
-                                    </div>
-                                    <div class="tab-pane well" id="messages">
-                                        <center>
-                                            <h3>Add one month of service to your account.</h3>
-                                            <br>
-                                            <form action="./charge.php" method="POST">
-                                                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_yAXifZWCUKoT11uWnNxOG8wC" data-amount="9999" data-name="StreamForce Broadcast" data-description="One month of streaming services." data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-locale="auto">
-                                                </script>
-                                            </form>
-                                            <br>
-                                        </center>
-                                    </div>
-                                    <div class="tab-pane well" id="settings">
-                                        <table class="table table-hover">
-                                            <thead>
-                                                <tr>
-                                                    <th>Date</th>
-                                                    <th>Amount</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1/21/2016</td>
-                                                    <td>$99.99</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2/14/2016</td>
-                                                    <td>$99.99</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>12/15/2017</td>
-                                                    <td>$99.99</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <center>
-                                            <p>If you have any questions about billing, please<br>feel free&nbsp;to email <a href="mailto:support@streamforcemedia.com">support@streamforcemedia.com</a></p>
-                                        </center>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/tabs-->
                         </div>
                         <!--/col-->
                         <!--/col-span-6-->
