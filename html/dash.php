@@ -5,7 +5,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>StreamForce Broadcast</title>
+		<title>FaceFinder 84</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet">
@@ -62,7 +62,7 @@
                         <li><a href="#"><i class="glyphicon glyphicon-exclamation-sign"></i> Rules</a></li>
                         <li><a href="#"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
                     </ul>
-                
+
             </ul>
 
             <hr>
@@ -85,7 +85,7 @@
         <div class="col-sm-9">
 
             <!-- column 2 -->
-           
+
             <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>
             <hr>
 
@@ -356,4 +356,4 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>
-</html>     
+</html>
