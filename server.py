@@ -20,5 +20,4 @@ def run(server_class=HTTPServer, handler_class=HTTPRequestHandler):
     httpd = socketserver.TCPServer(('', 1337), HTTPRequestHandler)
     httpd.serve_forever()
 
-if __name__ == '__main__':
-    run()
+run()
