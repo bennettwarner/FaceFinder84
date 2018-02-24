@@ -101,7 +101,7 @@
                             <hr>
                             <div class="panel panel-default"> 
                                 <div class="panel-heading"> 
-                                    <h4><span class="glyphicon glyphicon-th-list"></span> Recent Cases</h4>
+                                    <h4>Recent Cases</h4>
                                 </div>                                 
                                 <div class="panel-body"> 
                                     <table class="table table-striped"> 
@@ -226,4 +226,5 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>         
         <script src="js/bootstrap.min.js"></script>         
         <script src="js/scripts.js"></script>         
-    </body>
+    </body>     
+</html>

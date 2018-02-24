@@ -101,7 +101,7 @@
                             <hr>
                             <div class="panel panel-default"> 
                                 <div class="panel-heading"> 
-                                    <h4><span class="glyphicon glyphicon-th-list"></span> Recent Cases</h4>
+                                    <h4><span class="glyphicon glyphicon-th-list"></span>Recent Cases</h4>
                                 </div>                                 
                                 <div class="panel-body"> 
                                     <table class="table table-striped"> 

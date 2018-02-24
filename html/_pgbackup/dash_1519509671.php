@@ -72,7 +72,7 @@
                             </li>
                             <li>
                                 <a href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;Account</a>
-                            </li>                             
+                            </li>                                                          
                             <li></li>                             
                             <li>
                                 <a href="#"><i class="glyphicon glyphicon-off"></i> Logout</a>
@@ -101,7 +101,7 @@
                             <hr>
                             <div class="panel panel-default"> 
                                 <div class="panel-heading"> 
-                                    <h4><span class="glyphicon glyphicon-th-list"></span> Recent Cases</h4>
+                                    <h4>Recent Cases</h4>
                                 </div>                                 
                                 <div class="panel-body"> 
                                     <table class="table table-striped"> 
@@ -160,7 +160,7 @@
                             </div>                             
                             <div class="panel panel-default"> 
                                 <div class="panel-heading"> 
-                                    <h4><span class="glyphicon glyphicon-facetime-video"></span> Camera Feeds</h4>
+                                    <h4>Camera Feeds</h4>
                                 </div>                                 
                                 <div class="panel-body"> 
                                     <table class="table table-striped"> 
@@ -178,7 +178,7 @@
                                             <tr> 
                                                 <td>289</td>
                                                 <td>56.2%</td> 
-                                            </tr>                                             
+                                            </tr>                                                                                                                                                                                    
                                         </tbody>                                         
                                     </table>                                     
                                 </div>                                 
@@ -226,4 +226,5 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>         
         <script src="js/bootstrap.min.js"></script>         
         <script src="js/scripts.js"></script>         
-    </body>
+    </body>     
+</html>
