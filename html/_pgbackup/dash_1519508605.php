@@ -24,7 +24,7 @@
                         <span class="icon-bar"></span> 
                         <span class="icon-bar"></span> 
                     </button>                     
-                    <a class="navbar-brand" href="#">FaceFinder 84™</a> 
+                    <a class="navbar-brand" href="#">Welcome to FaceFinder 84™</a> 
                 </div>                 
                 <div class="navbar-collapse collapse"> 
                     <ul class="nav navbar-nav navbar-right"> 
@@ -71,7 +71,7 @@
                                 <a href="#"><i class="glyphicon glyphicon-flag"></i> Audit</a>
                             </li>
                             <li>
-                                <a href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;Account</a>
+                                <a href="#"><i class="glyphicon glyphicon-flag"></i>&nbsp;Account</a>
                             </li>                                                          
                             <li></li>                             
                             <li>
