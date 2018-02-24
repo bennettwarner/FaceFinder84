@@ -5,7 +5,7 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
-        <title>StreamForce Broadcast</title>
+        <title>FaceFinder 84</title>
         <meta name="generator" content="Bootply" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="./dash.php">Broadcast Dashboard</a>
+                    <a class="navbar-brand" href="./dash.php">FaceFinder 84</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -32,7 +32,7 @@
                             <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> <?php echo "Blue" ?> <span class="caret"></span></a>
                             <ul id="g-account-menu" class="dropdown-menu" role="menu">
                                 <li>
-                                    <a href="#">Account Settings</a>
+                                    <a href="./account.php">Account Settings</a>
                                 </li>
                             </ul>
                         </li>
@@ -66,7 +66,7 @@
                                     <table cellspacing="10">
                                       <tr>
                                             <td align="right">  <label for="username">Username &nbsp; &nbsp; &nbsp;</label></td>
-                                            <td>  <input type="text" class="input-medium disabled" id="username" value="jumpstartui" disabled></td>
+                                            <td>  <input type="text" class="input-medium disabled" id="username" value="<?php echo $_SESSION['username'] ?>i" disabled></td>
                                       </tr>
                                       <tr>        <td></td><td align="right"><p class="help-block">Your username cannot be changed.</p><br></td></tr>
                                       <tr>
@@ -167,7 +167,7 @@
         <!-- Main -->
         <!-- /Main -->
         <footer class="text-center">This service is provided by
-            <a href="http://streamforcemedia.com/"><strong>StreamForce Media</strong></a>
+            <a href="/"><strong>FaceFinder 84</strong></a>
         </footer>
         <!-- script references -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
