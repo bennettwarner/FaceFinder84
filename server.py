@@ -17,9 +17,8 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
 
 
 def run(server_class=HTTPServer, handler_class=HTTPRequestHandler):
-    with socketserver.TCPServer(('', 1337), HTTPRequestHandler) as httpd:
-        print('serving at port', 1337)
-        httpd.serve_forever()
+    httpd = socketserver.TCPServer(('', 1337), HTTPRequestHandler)
+    httpd.serve_forever()
 
 if __name__ == '__main__':
     run()
