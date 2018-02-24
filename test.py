@@ -24,4 +24,4 @@ for face_location in face_locations:
     pil_image = Image.fromarray(face_image)
     #pil_image.show()
     pil_image.save(open('./test2/test-'+str(int(time.time()))+'-'+str(count)+'.png', 'wb'))
-    count+=1
+    count += 1
