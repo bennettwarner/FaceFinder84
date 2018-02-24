@@ -16,7 +16,7 @@ $login_timeout = 300;
 $admin_email = '';
 
 //LOGIN FORM RESPONSE MESSAGES/ERRORS
-$signupthanks = 'Thank you for signing up! Please wait for an administrator to verify your account.';
+$signupthanks = 'Thank you for signing up! Please wait for an administrator to verify your account. <a href="'.$signin_url.'">Click Here</a> to log in.';
 $activemsg = 'Your account has been verified! You may now login at <br><a href="'.$signin_url.'">'.$signin_url.'</a>';
 
 //DO NOT TOUCH BELOW THIS LINE
