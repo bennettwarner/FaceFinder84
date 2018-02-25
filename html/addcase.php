@@ -1,6 +1,6 @@
 <?php
 $target_dir = "uploads/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"])."-".time();
+$target_file = $target_dir .time()."-".basename($_FILES["fileToUpload"]["name"]).;
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 // Check if image file is a actual image or fake image
@@ -25,11 +25,11 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
     $uploadOk = 0;
 }
 // Allow certain file formats
-//if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-// ) {
-//    echo "Sorry, only JPG, JPEG, & PNG files are allowed.";
-//    $uploadOk = 0;
-//}
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+ ) {
+    echo "Sorry, only JPG, JPEG, & PNG files are allowed.";
+    $uploadOk = 0;
+}
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
     echo "Sorry, your file was not uploaded.";
