@@ -24,6 +24,7 @@ def get_scanned():
 
 
 def run_comparison(new_files):
+    found_face = False
     if len(os.listdir('html/faces')) > 0:
         for face in os.listdir('html/faces'):
             face_file = face_recognition.load_image_file('html/faces/' + face)
@@ -33,11 +34,12 @@ def run_comparison(new_files):
                 uploaded_file_face_encoding = face_recognition.face_encodings(uploaded_file)[0]
                 results = face_recognition.compare_faces([face_encoding], uploaded_file_face_encoding)
                 if results[0] == True:
+                    found_face = True
                     number = lookup_face('html/faces/' + face)
                     conn.execute('INSERT INTO matches (case_num, face_id) VALUES ({0}, "{1}")'.format(int(upload.split('.')[0]), number))
-        conn.execute('INSERT INTO uploads (filename) VALUES ("{}")'.format(str(upload)))
+        if found_face:
+            conn.execute('INSERT INTO uploads (filename) VALUES ("{}")'.format(str(upload)))
         conn.execute('UPDATE cases SET complete = 1 WHERE img_path = "html/uploads/' + upload + '"')
-
         # Commit our changes to the database
         db.commit()
 
