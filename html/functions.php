@@ -43,28 +43,29 @@ function dashboardCasesTable() {
   $conn->close();
       }
 
-function caseCount($user) {
-    $sql2 = "SELECT * FROM `cases` WHERE `user` = ''".$user."'";
-    $result2 = $conn->query($sql2);
-    $count=0;
-    while($row2 = $result2->fetch_assoc()) {
-      $count++;
-    }
-    $conn->close();
-    return count;
-  }
-  function caseDropdown($user) {
-    global $conn;
-    $sql3 = "SELECT * FROM `cases` WHERE `user` = '".$user."'";
-    $result3 = $conn->query($sql3);
-    while($row3 = $result3->fetch_assoc()) {
-      echo "<li><a href='case.php?id=".$row3['id']."'>Case ".$row3['id']."</a></li>";
-    }
-    $conn->close();
-        }
-
   function auditTable() {
     global $conn;
+
+    function caseCount($user) {
+        $sql = "SELECT * FROM `cases` WHERE `user` = ''".$user."'";
+        $result = $conn->query($sql);
+        $count=0;
+        while($row = $result->fetch_assoc()) {
+          $count++;
+        }
+        $conn->close();
+        return count;
+      }
+      function caseDropdown($user) {
+        global $conn;
+        $sql = "SELECT * FROM `cases` WHERE `user` = '".$user."'";
+        $result = $conn->query($sql);
+        while($row = $result->fetch_assoc()) {
+          echo "<li><a href='case.php?id=".$row['id']."'>Case ".$row['id']."</a></li>";
+        }
+        $conn->close();
+            }
+
     $sql = "SELECT * FROM `members`";
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
