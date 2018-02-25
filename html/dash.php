@@ -155,7 +155,7 @@
                                     <h4>Welcome</h4>
                                 </div>
                                 <div class="panel-body">
-                                    <p>Welcome to FF84™. To create a new case use the "New Case" button, for further assistance please use the </p>
+                                    <p>Welcome to FF84™. To create a new case use the "New Case" button, for further assistance please use the Help button.</p>
                                 </div>
                             </div>
                             <div class="panel panel-default">
@@ -207,7 +207,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">FaceFinder Help</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
