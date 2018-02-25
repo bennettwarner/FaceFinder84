@@ -33,6 +33,33 @@ function getSourceIMG($id) {
   $conn->close();
     }
 
+    function match($id) {
+      global $conn;
+      $sql = "SELECT `face_id` FROM `matches` WHERE `case_num` = '".$id."'";
+      $matches = array();
+      $result = $conn->query($sql);
+      while($row = $result->fetch_assoc()) {
+               array_push($matches, $row['face_id']);
+      }
+      return $matches;
+      $conn->close();
+        }
+
+/**  function matchTable($id) {
+    global $conn;
+    $sql = "SELECT `face_id` FROM `matches` WHERE `case_num` = '".$id."'";
+    $matchCount = 0;
+    $matches = array();
+    $result = $conn->query($sql);
+    while($row = $result->fetch_assoc()) {
+            $matchCount++;
+             array_push($matches, $row['face_id']);
+    }
+    foreach ($matches as &$value) {
+    }
+    $conn->close();
+      }
+**/
 function getTitle($title) {
   global $conn;
   $sql = "SELECT `title` FROM `cases` WHERE `id` = '".$title."' LIMIT 1";

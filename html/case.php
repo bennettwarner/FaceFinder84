@@ -117,19 +117,13 @@
                                     <table class="table table-striped">
                                         <thead>
                                             <tr>
+                                                <th>Time</th>
                                                 <th>Location</th>
-                                                <th>Status</th>
+                                                <th>Image</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>Profhacks Lobby</td>
-                                                <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Times Square</td>
-                                                <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
-                                            </tr>
+                                            <?php print_r(match($_GET['id']));?>
                                         </tbody>
                                     </table>
                                 </div>
