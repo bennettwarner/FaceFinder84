@@ -51,10 +51,9 @@ function matchTable($id) {
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
       echo "<tr>";
-      echo "<td>".$row['tiem']."</td>";
+      echo "<td>".$row['time']."</td>";
       echo "<td>".$row['location']."</td>";
       echo "<td><a href='".substr($row['img_path'], 5)."'>Match</a></td>";
-      echo "<td><div class='loader'></div></td>";
       echo "<tr>";
     }
     foreach ($matches as &$value) {
