@@ -39,7 +39,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
       addCase($_POST['title'], $_POST['notes'], $target_file, getUsername());
-        header('Location: cases.php');
+        header('Location: cases.php?addsuccess');
     } else {
         echo "Sorry, there was an error uploading your file.";
     }

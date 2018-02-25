@@ -87,7 +87,7 @@
                 <!-- /col-3 -->
                 <div class="col-sm-9">
                     <!-- column 2 -->
-                    <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>
+                    <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> Add a Case</strong></a>
                     <hr>
                     <div class="row">
                       <form action="addcase.php" method="post"  enctype="multipart/form-data" name="case">
