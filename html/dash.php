@@ -1,5 +1,5 @@
 <?php require "login/loginheader.php"; ?>
-<?php include "login/dbconfig.php"; ?>
+<?php require "./functions.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -30,7 +30,7 @@
                     <ul class="nav navbar-nav navbar-right">
 
                         <li class="dropdown">
-                            <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> <?php echo $_SESSION['username'] ?> <span class="caret"></span></a>
+                            <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> <?php echo getUsername(); ?> <span class="caret"></span></a>
                             <ul id="g-account-menu" class="dropdown-menu" role="menu">
                                 <li>
                                     <a href="./account.php">Account Settings</a>
