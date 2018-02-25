@@ -46,6 +46,10 @@
         </div>
         <!-- /Header -->
         <!-- Main -->
+        <?php
+        if (isset($_GET['addsuccess'])) {
+          echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Case added successfully</div><div id="returnVal" style="display:none;">false</div>';
+      }?>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-3">
