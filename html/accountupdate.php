@@ -1,5 +1,5 @@
 <?php require "login/loginheader.php"; ?>
-<?php require "./functions.php"; ?>
+<?php require "functions.php"; ?>
 <?php
 function emailUpdate($email)
 {
@@ -12,8 +12,7 @@ else {
 }
 
 print_r($_POST);
-if(isset($_POST['password1']))
-{
+
   echo "<h1>Form lololol</h1>";
   if(!empty($_POST['password1']) && !empty($_POST['password2']) && $_POST['password1']!=$_POST['password2']){
     header('Location: ./account.php?mismatch');
@@ -30,5 +29,5 @@ echo $sql;
     $conn->close();
 
   }
-}
+
 ?>
