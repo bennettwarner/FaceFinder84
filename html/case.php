@@ -131,7 +131,7 @@
                                             <?php
                                             $matches = match($_GET['id']);
                                             print_r($matches);
-                                            foreach ($matches as &$value) {
+                                            foreach ($matches as $value) {
                                             echo matchTable($value);
                                             }
                                             ?>
