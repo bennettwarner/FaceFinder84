@@ -24,18 +24,23 @@ def get_scanned():
 
 
 def run_comparison(new_files):
-    for face in os.listdir('html/faces'):
-        face_file = face_recognition.load_image_file('html/faces/' + face)
-        face_encoding = face_recognition.face_encodings(face_file)[0]
-        for upload in new_files:
-            uploaded_file = face_recognition.load_image_file('html/uploads/' + upload)
-            uploaded_file_face_encoding = face_recognition.face_encodings(uploaded_file)[0]
-            results = face_recognition.compare_faces([face_encoding], uploaded_file_face_encoding)
-            if results[0] == True:
-                conn.execute('INSERT INTO matches (case_num, face_id) VALUES ({0}, "{1}")'.format(int(upload.split('.')[0]), lookup_face('html/faces/' + face)))
+    if len(os.listdir('html/faces')) > 0:
+        for face in os.listdir('html/faces'):
+            face_file = face_recognition.load_image_file('html/faces/' + face)
+            face_encoding = face_recognition.face_encodings(face_file)[0]
+            for upload in new_files:
+                uploaded_file = face_recognition.load_image_file('html/uploads/' + upload)
+                uploaded_file_face_encoding = face_recognition.face_encodings(uploaded_file)[0]
+                results = face_recognition.compare_faces([face_encoding], uploaded_file_face_encoding)
+                if results[0] == True:
+                    number = lookup_face('html/faces/' + face)
+                    conn.execute('INSERT INTO matches (case_num, face_id) VALUES ({0}, "{1}")'.format(int(upload.split('.')[0]), number))
+        conn.execute('INSERT INTO uploads (filename) VALUES ("{}")'.format(str(upload)))
+        conn.execute('UPDATE cases SET complete = 1 WHERE img_path = "html/uploads/' + upload + '"')
 
-    # Commit our changes to the database
-    db.commit()
+        # Commit our changes to the database
+        db.commit()
+
 
 def scan_uploads():
     already_scanned = get_scanned()
@@ -43,7 +48,8 @@ def scan_uploads():
     for file in os.listdir('html/uploads'):
         if file not in already_scanned:
             new_files.append(file)
-    run_comparison(new_files)
+    if len(new_files) > 0:
+        run_comparison(new_files)
 
 
 while 1:
