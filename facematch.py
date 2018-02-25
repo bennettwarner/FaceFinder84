@@ -1,3 +1,7 @@
+# Author: Ellis Madagan
+# Last update: 2/25/2018
+
+
 import os
 import time
 import MySQLdb as mysql

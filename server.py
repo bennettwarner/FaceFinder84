@@ -1,3 +1,6 @@
+# Author: Ellis Madagan
+# Last update: 2/25/2018
+
 from http.server import BaseHTTPRequestHandler
 import socketserver
 import facecut

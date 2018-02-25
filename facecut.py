@@ -1,3 +1,6 @@
+# Author: Ellis Madagan
+# Last update: 2/25/2018
+
 from PIL import Image
 import face_recognition
 import time
