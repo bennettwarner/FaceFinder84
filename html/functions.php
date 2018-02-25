@@ -83,7 +83,7 @@ function dashboardCasesTable() {
     $sql = "SELECT `id` FROM `cases` ORDER  BY id DESC LIMIT 1";
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
-      return $row["id"];        }
+      return ($row["id"]+1);        }
     $conn->close();
   }
 
