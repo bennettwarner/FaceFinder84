@@ -43,49 +43,6 @@ function dashboardCasesTable() {
   $conn->close();
       }
 
-  function auditTable() {
-    global $conn;
-
-    function caseCount($user) {
-        $sql = "SELECT * FROM `cases` WHERE `user` = ''".$user."'";
-        $result = $conn->query($sql);
-        $count=0;
-        while($row = $result->fetch_assoc()) {
-          $count++;
-        }
-        $conn->close();
-        return count;
-      }
-      function caseDropdown($user) {
-        global $conn;
-        $sql = "SELECT * FROM `cases` WHERE `user` = '".$user."'";
-        $result = $conn->query($sql);
-        while($row = $result->fetch_assoc()) {
-          echo "<li><a href='case.php?id=".$row['id']."'>Case ".$row['id']."</a></li>";
-        }
-        $conn->close();
-            }
-
-    $sql = "SELECT * FROM `members`";
-    $result = $conn->query($sql);
-    while($row = $result->fetch_assoc()) {
-            echo "<tr>";
-            echo "<td>".$row['username']."</td>";
-            echo "<td>
-            <div class='btn-group>'
-              <button type='button' class='btn btn-default dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-                ".caseCount($row['username'])." Cases <span class='caret'></span>
-              </button>
-              <ul class='dropdown-menu'>
-                ".caseDropdown($row['username'])."
-              </ul>
-            </div>
-            </td>";
-            echo "<tr>";
-    }
-    $conn->close();
-        }
-
   function fullCasesTable() {
     global $conn;
     $sql = "SELECT * FROM `cases`  ORDER  BY id DESC";

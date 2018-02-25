@@ -67,14 +67,9 @@
                             <li>
                                 <a href="jobs.php"><i class="glyphicon glyphicon-tasks"></i> Jobs</a>
                             </li>
-                            <li></li>
-                            <li>
-                                <a href="audit.php"><i class="glyphicon glyphicon-flag"></i> Audit</a>
-                            </li>
                             <li>
                                 <a href="account.php"><i class="glyphicon glyphicon-user"></i> Account</a>
                             </li>
-                            <li></li>
                             <li>
                                 <a href="./login/logout.php"><i class="glyphicon glyphicon-off"></i> Logout</a>
                             </li>
