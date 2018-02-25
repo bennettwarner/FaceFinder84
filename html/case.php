@@ -146,7 +146,7 @@
                                 <div class="panel-body">
                                     <p><?php
                                     $output = shell_exec('face_recognition faces/ '.getSourceIMG($_GET['id']));
-                                    echo "<pre>$output</pre>";
+                                    echo "$output";
                                     ?></p>
                                 </div>
                                 <!--/panel-body-->
