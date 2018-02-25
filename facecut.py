@@ -18,6 +18,7 @@ def process_image(encoded_file):
 
     location = 'Rowan University'
 
+    # Write temp image
     with open('temp/temp.jpg', 'wb') as file:
         file.write(base64.b64decode(encoded_file))
 
