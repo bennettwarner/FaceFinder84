@@ -45,7 +45,7 @@ def run_comparison(new_files):
                     conn.execute('INSERT INTO matches (case_num, face_id) VALUES ({0}, "{1}")'.format(int(upload.split('.')[0]), number))
         if found_face:
             conn.execute('INSERT INTO uploads (filename) VALUES ("{}")'.format(str(upload)))
-        conn.execute('UPDATE cases SET complete = 1 WHERE img_path = "html/uploads/' + upload + '"')
+        conn.execute('UPDATE cases SET complete = 1 WHERE img_path = "uploads/' + upload + '"')
         # Commit our changes to the database
         db.commit()
 
