@@ -97,7 +97,7 @@
                                 <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-plus"></i> <br> New Case </a>
                                 <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-list"></i> <br> Cases </a>
                                 <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-tasks"></i> <br> Jobs </a>
-                                <a href="" class="btn btn-primary col-sm-3" data-toggle="modal" data-target="#help"> <i class="glyphicon glyphicon-question-sign"></i> <br> Help</a>
+                                <a href="#help" class="btn btn-primary col-sm-3" data-toggle="modal" data-target="#help"> <i class="glyphicon glyphicon-question-sign"></i> <br> Help</a>
                             </div>
                             <hr>
                             <div class="panel panel-default">
