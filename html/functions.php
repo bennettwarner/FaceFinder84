@@ -74,7 +74,7 @@ function dashboardCasesTable() {
             echo "<td>
             <div class='btn-group>'
               <button type='button' class='btn btn-default dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-                ".caseCount($row['username'])." Cases <span class='caret'></span>
+                "." Cases <span class='caret'></span>
               </button>
               <ul class='dropdown-menu'>
                 ".caseDropdown($row['username'])."
