@@ -43,6 +43,27 @@ function dashboardCasesTable() {
   $conn->close();
       }
 
+  function fullCasesTable() {
+    global $conn;
+    $sql = "SELECT * FROM `cases`  ORDER  BY id DESC";
+    $result = $conn->query($sql);
+    while($row = $result->fetch_assoc()) {
+      if ($row['complete']==0) {
+        $status="in progress";
+      }
+      else{
+        $status=matchCount($row['id']);
+      }
+            echo "<tr>";
+            echo "<td><a href='case.php?id=".$row['id']."'>".$row['title']."</td>";
+            echo "<td>".$row['user']."</td>";
+            echo "<td>".$status."</td>";
+            echo "<tr>";
+    }
+    $conn->close();
+        }
+
+
   function addCase($title, $notes, $img_path, $user) {
     global $conn;
     $sql = "INSERT INTO `cases` (`id`, `title`, `notes`, `img_path`, `user`, `creation_time`, `complete`) VALUES (NULL, '".$title."', '".$notes."', '".$img_path."', '".$user."', CURRENT_TIMESTAMP, '0');
