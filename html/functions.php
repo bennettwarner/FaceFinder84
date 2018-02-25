@@ -52,7 +52,7 @@ function dashboardCasesTable() {
             echo "<td><a href='cases.php?id=".$row['id']."'>".$row['title']."</td>";
             echo "<td>".$row['user']."</td>";
             echo "<td>".$row['creation_time']."</td>";
-            echo "<td><div class="loader"></div></td>";
+            echo "<td><div class='loader'></div></td>";
             echo "<tr>";
     }
     $conn->close();
