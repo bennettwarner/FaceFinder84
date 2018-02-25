@@ -72,7 +72,7 @@
                                 <a href="#"><i class="glyphicon glyphicon-flag"></i> Audit</a>
                             </li>
                             <li>
-                                <a href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;Account</a>
+                                <a href="account.php"><i class="glyphicon glyphicon-user"></i>&nbsp;Account</a>
                             </li>
                             <li></li>
                             <li>
