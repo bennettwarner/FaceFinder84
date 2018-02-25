@@ -24,10 +24,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="./dash">FaceFinder 84™</a>
+                    <a class="navbar-brand" href="./dash.php">FaceFinder 84™</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
+
                         <li class="dropdown">
                             <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> <?php echo getUsername(); ?> <span class="caret"></span></a>
                             <ul id="g-account-menu" class="dropdown-menu" role="menu">
@@ -58,24 +59,24 @@
                                 <a href="/dash.php"><i class="glyphicon glyphicon-home"></i> Home</a>
                             </li>
                             <li>
-                                <a href="#"><i class="glyphicon glyphicon-search"></i> New Case <span class="badge badge-info"></span></a>
+                                <a href="newCase.php"><i class="glyphicon glyphicon-plus"></i> New Case <span class="badge badge-info"></span></a>
                             </li>
                             <li>
-                                <a href="#"><i class="glyphicon glyphicon-list"></i> Active Cases</a>
+                                <a href="cases.php"><i class="glyphicon glyphicon-list"></i> Active Cases</a>
                             </li>
                             <li>
-                                <a href="#"><i class="glyphicon glyphicon-tasks"></i> Jobs</a>
-                            </li>
-                            <li></li>
-                            <li>
-                                <a href="#"><i class="glyphicon glyphicon-flag"></i> Audit</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;Account</a>
+                                <a href="jobs.php"><i class="glyphicon glyphicon-tasks"></i> Jobs</a>
                             </li>
                             <li></li>
                             <li>
-                                <a href="#"><i class="glyphicon glyphicon-off"></i> Logout</a>
+                                <a href="audit.php"><i class="glyphicon glyphicon-flag"></i> Audit</a>
+                            </li>
+                            <li>
+                                <a href="account.php"><i class="glyphicon glyphicon-user"></i> Account</a>
+                            </li>
+                            <li></li>
+                            <li>
+                                <a href="./login/logout.php"><i class="glyphicon glyphicon-off"></i> Logout</a>
                             </li>
                         </ul>
                     </ul>
@@ -83,111 +84,125 @@
                     <ul class="nav nav-pills nav-stacked">
                         <li class="nav-header"></li>
                     </ul>
-                    <pgdiv class="pinegrow-ui-helper pghelper-bs3-column">
-                        <pgdiv class="pghelper-bs3-column-inner">
-                            <pgspan>sm  3</pgspan>
-                        </pgdiv>
-                    </pgdiv>
-                </div>                 
-                <!-- /col-3 -->                 
+                </div>
+                <!-- /col-3 -->
                 <div class="col-sm-9">
                     <!-- column 2 -->
-                    <a href="#"><strong><h1>New Case</h1></strong></a>
+                    <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>
                     <hr>
                     <div class="row">
                         <!-- center left-->
+                        <div class="col-md-6">
+                            <div class="btn-group btn-group-justified">
+                                <a href="newCase.php" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-plus"></i> <br> New Case </a>
+                                <a href="cases.php" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-list"></i> <br> Cases </a>
+                                <a href="jobs.php" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-tasks"></i> <br> Jobs </a>
+                                <a href="#help" class="btn btn-primary col-sm-3" data-toggle="modal" data-target="#help"> <i class="glyphicon glyphicon-question-sign"></i> <br> Help</a>
+                            </div>
+                            <hr>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4><span class="glyphicon glyphicon-th-list"></span> Recent Cases</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Officer</th>
+                                                <th>Matches</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php dashboardCasesTable()?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--/panel-body-->
+                            </div>
+                            <!--/panel-->
+                            <!--tabs-->
+                            <!--/tabs-->
+                        </div>
                         <!--/col-->
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4>Welcome</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <p>Welcome to FF84™. To create a new case use the "New Case" button, for further assistance please use the Help button.</p>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4><span class="glyphicon glyphicon-facetime-video"></span> Camera Feeds</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Location</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Profhacks Lobby</td>
+                                                <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Times Square</td>
+                                                <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--/panel-body-->
+                            </div>
+                            <!--/panel-->
+                            <!--/panel-->
+                        </div>
                         <!--/col-span-6-->
                     </div>
                     <!--/row-->
                     <a href="#"></a>
                     <div class="row">
-</div>
-                    <pgdiv class="pinegrow-ui-helper pghelper-bs3-column">
-                        <pgdiv class="pghelper-bs3-column-inner">
-                            <pgspan>sm  9</pgspan>
-                        </pgdiv>
-                    </pgdiv>
-                </div>                 
-                <div class="col-sm-9">
-                    <!-- column 2 -->
-                    <a href="#"></a>
-                    <div class="row">
-                        <!-- center left-->
-                        <!--/col-->
-                        <!--/col-span-6-->
+                        <div class="col-md-12">
+                            <ul class="list-group">
+</ul>
+                        </div>
                     </div>
-                    <!--/row-->
-                    <a href="#"></a>
-                    <div class="row">
-</div>
-                    <pgdiv class="pinegrow-ui-helper pghelper-bs3-column">
-                        <pgdiv class="pghelper-bs3-column-inner">
-                            <pgspan>sm  9</pgspan>
-                        </pgdiv>
-                    </pgdiv>
-                </div>                 
+                </div>
                 <!--/col-span-9-->
-                <div class="col-md-9">
-                    <h3>Case Title:<input class="form-control" placeholder="Title"></h3> 
-                    <pgdiv class="pinegrow-ui-helper pghelper-bs3-column">
-                        <pgdiv class="pghelper-bs3-column-inner">
-                            <pgspan>md  9</pgspan>
-                        </pgdiv>
-                    </pgdiv>
-                </div>
-                <div class="col-md-9">
-                    <h3>Notes:<textarea class="form-control" rows="3" placeholder="Enter Notes Here"></textarea></h3> 
-                    <pgdiv class="pinegrow-ui-helper pghelper-bs3-column">
-                        <pgdiv class="pghelper-bs3-column-inner">
-                            <pgspan>md  9</pgspan>
-                        </pgdiv>
-                    </pgdiv>
-                </div>
-                <div class="col-md-9">
-                    <h3>Choose a picture of the individual to upload:<form> 
-                            <div class="form-group"> 
-</div>                             
-                            <div class="form-group"> 
-</div>                             
-                            <div class="form-group"> 
-                                <label for="exampleInputFile" class="control-label">File input</label>                                 
-                                <input type="file" id="exampleInputFile">                                  
-                            </div>                             
-                            <div class="checkbox">                                  
-</div>                             
-                            <button type="submit" class="btn btn-default">Submit</button>                             
-                            <a href="#" class="btn btn-default" role="button">Cancel</a>
-                        </form></h3> 
-                    <pgdiv class="pinegrow-ui-helper pghelper-bs3-column">
-                        <pgdiv class="pghelper-bs3-column-inner">
-                            <pgspan>md  9</pgspan>
-                        </pgdiv>
-                    </pgdiv>
-                </div>
             </div>
         </div>
         <!-- /Main -->
-        <div class="modal" id="addWidgetModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Add Widget</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>Add a widget stuff here..</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#" data-dismiss="modal" class="btn">Close</a>
-                        <a href="#" class="btn btn-primary">Save changes</a>
-                    </div>
-                </div>
-                <!-- /.modal-content -->
-            </div>
-            <!-- /.modal-dalog -->
-        </div>
-        <!-- /.modal -->
+        <!-- Modal -->
+<div class="modal fade" id="help" tabindex="-1" role="dialog" aria-labelledby="Help" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">FaceFinder Help</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li><b>New Case</b> - This creates a new "case" in the system, a "case" is used to initiate a search for the suspect.</li>
+          <li><b>Active Cases</b> - This is a directory of all current cases active in your system.</li>
+          <li><b>Jobs</b> - This is where you can check the progress of running searches</li>
+          <li><b>Audit</b> - This is a who initiated which searches to create an accountability trail.</li>
+          <li><b>Account</b> - In this section you can manage and update your account details like email and password.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
         <!-- script references -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

@@ -108,13 +108,14 @@
                                     <table class="table table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Officer</th>
-                                                <th>Matches</th>
+                                                <th>Case</th>
+                                                <th>Submitted By</th>
+                                                <th>Start Time</th>
+                                                <th>Status</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php dashboardCasesTable()?>
+                                            <?php jobsTable()?>
                                         </tbody>
                                     </table>
                                 </div>

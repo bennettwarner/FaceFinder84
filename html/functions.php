@@ -43,6 +43,21 @@ function dashboardCasesTable() {
   $conn->close();
       }
 
+  function jobsTable() {
+    global $conn;
+    $sql = "SELECT * FROM `cases` WHERE `complete` = 0 ORDER  BY id DESC";
+    $result = $conn->query($sql);
+    while($row = $result->fetch_assoc()) {
+            echo "<tr>";
+            echo "<td><a href='cases.php?id=".$row['id']."'>".$row['title']."</td>";
+            echo "<td>".$row['user']."</td>";
+            echo "<td>".$row['creation_time']."</td>";
+            echo "<td><div class="loader"></div></td>";
+            echo "<tr>";
+    }
+    $conn->close();
+        }
+
   function matchCount($id) {
     global $conn;
     $sql = "SELECT * FROM `matches` WHERE `case_num` = ".$id;
