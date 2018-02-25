@@ -70,7 +70,7 @@
                                     <h4>Profile</h4>
                                 </div>
                                 <div class="panel-body">
-                                    <form id="edit-profile" class="form-horizontal" method="post" action="./accountupdate.php">
+                                    <form action="accountupdate.php" method="post"  id="edit-profile" class="form-horizontal">
                                     <center>
                                     <table cellspacing="10">
                                       <tr>

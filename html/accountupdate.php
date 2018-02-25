@@ -12,7 +12,6 @@ else {
 }
 
 print_r($_POST);
-$passwordError = false;
 if(isset($_POST['password1']))
 {
   echo "<h1>Form lololol</h1>";
