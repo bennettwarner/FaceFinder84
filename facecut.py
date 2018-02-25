@@ -30,6 +30,7 @@ def process_image(encoded_file):
         face_image = image[top:bottom, left:right]
         pil_image = Image.fromarray(face_image)
         pil_image_path = 'html/faces/' + str(int(time.time())) + '-' + str(count) + '.png'
+        count += 1
         pil_image.save(open(pil_image_path, 'wb'))
         conn.execute('INSERT INTO faces(img_path, location) VALUES ("{0}", "{1}")'.format(pil_image_path, location))
 
