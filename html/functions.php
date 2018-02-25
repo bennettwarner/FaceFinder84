@@ -43,13 +43,13 @@ function dashboardCasesTable() {
   $conn->close();
       }
 
-      function addCase($title, $notes, $img_path, $user) {
-        global $conn;
-        $sql = "INSERT INTO `cases` (`id`, `title`, `notes`, `img_path`, `user`, `creation_time`, `complete`) VALUES (NULL, '".$title."', '".$notes."', '".$path."', '".$ben."', CURRENT_TIMESTAMP, '0');
+  function addCase($title, $notes, $img_path, $user) {
+    global $conn;
+    $sql = "INSERT INTO `cases` (`id`, `title`, `notes`, `img_path`, `user`, `creation_time`, `complete`) VALUES (NULL, '".$title."', '".$notes."', '".$path."', '".$ben."', CURRENT_TIMESTAMP, '0');
 ";
-        $result = $conn->query($sql);
-        $conn->close();
-            }
+    $result = $conn->query($sql);
+    $conn->close();
+        }
 
   function jobsTable() {
     global $conn;

@@ -1,3 +1,5 @@
+<?php require "login/loginheader.php"; ?>
+<?php require "./functions.php"; ?>
 <?php
 $target_dir = "uploads/";
 $target_file = $target_dir .time()."-".basename($_FILES["fileToUpload"]["name"]);
