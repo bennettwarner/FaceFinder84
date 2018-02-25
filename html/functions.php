@@ -58,7 +58,7 @@ function dashboardCasesTable() {
     $sql = "SELECT * FROM `cases` WHERE `user` = ".$user;
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
-      echo "<li><a href='case.php?id=".$row['id']."'>Case ".$row['id']."</a></li>"
+      echo "<li><a href='case.php?id=".$row['id']."'>Case ".$row['id']."</a></li>";
     }
     $conn->close();
     return count;
