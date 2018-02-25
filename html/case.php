@@ -123,7 +123,12 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php print_r(match($_GET['id']));?>
+                                            <?php
+                                            $matches = match($_GET['id']);
+                                            foreach ($matches as &$value) {
+                                            echo matchTable($value);
+                                            }
+                                            ?>
                                         </tbody>
                                     </table>
                                 </div>

@@ -45,21 +45,23 @@ function getSourceIMG($id) {
       $conn->close();
         }
 
-/**  function matchTable($id) {
+function matchTable($id) {
     global $conn;
-    $sql = "SELECT `face_id` FROM `matches` WHERE `case_num` = '".$id."'";
-    $matchCount = 0;
-    $matches = array();
+    $sql = "SELECT * FROM `faces` WHERE `ID` = '".$id."'";
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
-            $matchCount++;
-             array_push($matches, $row['face_id']);
+      echo "<tr>";
+      echo "<td>".$row['tiem']."</td>";
+      echo "<td>".$row['location']."</td>";
+      echo "<td><a href='".substr($row['img_path'], 5)."'>Match</a></td>";
+      echo "<td><div class='loader'></div></td>";
+      echo "<tr>";
     }
     foreach ($matches as &$value) {
     }
     $conn->close();
       }
-**/
+
 function getTitle($title) {
   global $conn;
   $sql = "SELECT `title` FROM `cases` WHERE `id` = '".$title."' LIMIT 1";
