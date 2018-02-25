@@ -1,38 +1,6 @@
 <?php require "login/loginheader.php"; ?>
 <?php require "./functions.php"; ?>
-<?php
-function emailUpdate($email)
-{
-if (!empty($email)){
-  return ", `email` = '".$email."'";
-}
-else {
-  return "";
-}
-}
 
-print_r($_POST);
-$passwordError = false;
-if(isset($_POST['password1']))
-{
-  echo "<h1>Form lololol</h1>";
-  if(!empty($_POST['password1']) && !empty($_POST['password2']) && $_POST['password1']!=$_POST['password2']){
-    $passwordError = true;
-  }
-  else {
-    global $conn;
-
-    $pw_hash = password_hash($_POST['password1'], PASSWORD_DEFAULT);
-    $id = getID();
-
-    $sql = "UPDATE `members` SET `password` = '".$pw_hash."'".emailUpdate($_POST['email'])." WHERE members.id = '".$id."'";
-
-    $conn->query($sql);
-    $conn->close();
-
-  }
-}
-?>
 
 
 <!DOCTYPE html>
@@ -92,7 +60,7 @@ if(isset($_POST['password1']))
                         <!-- center left-->
                         <div class="col-md-8">
                           <?php
-                          if ($passwordError == true) {
+                          if (isset($_GET['mismatch'])) {
 
                             echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Password fields must match</div><div id="returnVal" style="display:none;">false</div>';
 
@@ -102,7 +70,7 @@ if(isset($_POST['password1']))
                                     <h4>Profile</h4>
                                 </div>
                                 <div class="panel-body">
-                                    <form id="edit-profile" class="form-horizontal" method="post" action="./account.php">
+                                    <form id="edit-profile" class="form-horizontal" method="post" action="./accountupdate.php">
                                     <center>
                                     <table cellspacing="10">
                                       <tr>
