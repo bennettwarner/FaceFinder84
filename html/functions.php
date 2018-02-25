@@ -33,6 +33,16 @@ function getSourceIMG($id) {
   $conn->close();
     }
 
+function inProgress($id) {
+  global $conn;
+  $sql = "SELECT `complete` FROM `cases` WHERE `id` = '".$id."' LIMIT 1";
+  $result = $conn->query($sql);
+  while($row = $result->fetch_assoc()) {
+          return $row["complete"];
+  }
+  $conn->close();
+    }
+
     function match($id) {
       global $conn;
       $sql = "SELECT `face_id` FROM `matches` WHERE `case_num` = '".$id."'";
