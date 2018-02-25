@@ -9,4 +9,4 @@ def process_image(file):
         top,right,bottom,left = face_location
         face_image = image[top:bottom, left:right]
         pil_image = Image.fromarray(face_image)
-        pil_image.save(open('../html/faces-'+str(int(time.time()))+'-'+str(count)+'.png', 'wb'))
+        pil_image.save(open('../html/faces'+str(int(time.time()))+'-'+str(count)+'.png', 'wb'))
