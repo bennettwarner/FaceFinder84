@@ -27,10 +27,16 @@ def run_comparison(new_files):
     found_face = False
     if len(os.listdir('html/faces')) > 0:
         for face in os.listdir('html/faces'):
-            face_file = face_recognition.load_image_file('html/faces/' + face)
+            try:
+                face_file = face_recognition.load_image_file('html/faces/' + face)
+            except:
+                continue
             face_encoding = face_recognition.face_encodings(face_file)[0]
             for upload in new_files:
-                uploaded_file = face_recognition.load_image_file('html/uploads/' + upload)
+                try:
+                    uploaded_file = face_recognition.load_image_file('html/uploads/' + upload)
+                except:
+                    continue
                 uploaded_file_face_encoding = face_recognition.face_encodings(uploaded_file)[0]
                 results = face_recognition.compare_faces([face_encoding], uploaded_file_face_encoding)
                 if results[0] == True:
