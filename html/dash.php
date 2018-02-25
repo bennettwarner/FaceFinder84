@@ -59,7 +59,7 @@
                                 <a href="/dash.php"><i class="glyphicon glyphicon-home"></i> Home</a>
                             </li>
                             <li>
-                                <a href="#"><i class="glyphicon glyphicon-search"></i> New Case <span class="badge badge-info"></span></a>
+                                <a href="#"><i class="glyphicon glyphicon-plus"></i> New Case <span class="badge badge-info"></span></a>
                             </li>
                             <li>
                                 <a href="#"><i class="glyphicon glyphicon-list"></i> Active Cases</a>
@@ -95,8 +95,8 @@
                         <div class="col-md-6">
                             <div class="btn-group btn-group-justified">
                                 <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-plus"></i> <br> New Case </a>
-                                <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-cloud"></i> <br> Cloud</a>
-                                <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-cog"></i> <br> Settings </a>
+                                <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-list"></i> <br> Cases </a>
+                                <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-tasks"></i> <br> Jobs </a>
                                 <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-question-sign"></i> <br> Help</a>
                             </div>
                             <hr>
