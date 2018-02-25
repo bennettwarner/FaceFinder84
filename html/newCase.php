@@ -94,17 +94,17 @@
                         <div class="col-md-10">
                             <div class="input-group">
                                 <span class="input-group-addon">Case Title:</span>
-                                <input type="text" class="form-control" name="title" placeholder="">
+                                <input type="text" class="form-control" name="title" placeholder="" required>
                             </div>
                             <br>
                             <div class="form-group">
                                 <label class="control-label" for="formInput33">Notes</label>
-                                <textarea class="form-control" rows="3" name="notes" id="formInput33"></textarea>
+                                <textarea class="form-control" rows="3" name="notes" id="formInput33"required></textarea>
                             </div>
                             <br>
                             <div class="form-group">
                                 <label class="control-label" for="formInput33">Know Image of Suspect</label>
-                            <input type="file" name="fileToUpload" id="fileToUpload">
+                            <input type="file" name="fileToUpload" id="fileToUpload" required>
                           </div>
                             <br>
                             <center>
