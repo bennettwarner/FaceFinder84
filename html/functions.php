@@ -66,7 +66,7 @@ function matchTable($id) {
       echo "<td><a href='".substr($row['img_path'], 5)."'>Match</a></td>";
       echo "<tr>";
     }
-    $conn->close();
+    //$conn->close();
       }
 
 function getTitle($title) {
