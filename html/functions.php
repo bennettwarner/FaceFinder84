@@ -25,7 +25,7 @@ function getID() {
 
 function dashboardCasesTable() {
   global $conn;
-  $sql = "SELECT * FROM `cases`  ORDER  BY id DESC LIMIT 5";
+  $sql = "SELECT * FROM `cases`  ORDER  BY id DESC LIMIT 10";
   $result = $conn->query($sql);
   while($row = $result->fetch_assoc()) {
     if ($row['complete']==0) {

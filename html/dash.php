@@ -59,24 +59,24 @@
                                 <a href="/dash.php"><i class="glyphicon glyphicon-home"></i> Home</a>
                             </li>
                             <li>
-                                <a href="#"><i class="glyphicon glyphicon-plus"></i> New Case <span class="badge badge-info"></span></a>
+                                <a href="newCase.php"><i class="glyphicon glyphicon-plus"></i> New Case <span class="badge badge-info"></span></a>
                             </li>
                             <li>
-                                <a href="#"><i class="glyphicon glyphicon-list"></i> Active Cases</a>
+                                <a href="cases.php"><i class="glyphicon glyphicon-list"></i> Active Cases</a>
                             </li>
                             <li>
-                                <a href="#"><i class="glyphicon glyphicon-tasks"></i> Jobs</a>
+                                <a href="jobs.php"><i class="glyphicon glyphicon-tasks"></i> Jobs</a>
                             </li>
                             <li></li>
                             <li>
-                                <a href="#"><i class="glyphicon glyphicon-flag"></i> Audit</a>
+                                <a href="audit.php"><i class="glyphicon glyphicon-flag"></i> Audit</a>
                             </li>
                             <li>
                                 <a href="account.php"><i class="glyphicon glyphicon-user"></i> Account</a>
                             </li>
                             <li></li>
                             <li>
-                                <a href="#"><i class="glyphicon glyphicon-off"></i> Logout</a>
+                                <a href="./login/logout.php"><i class="glyphicon glyphicon-off"></i> Logout</a>
                             </li>
                         </ul>
                     </ul>
@@ -94,9 +94,9 @@
                         <!-- center left-->
                         <div class="col-md-6">
                             <div class="btn-group btn-group-justified">
-                                <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-plus"></i> <br> New Case </a>
-                                <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-list"></i> <br> Cases </a>
-                                <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-tasks"></i> <br> Jobs </a>
+                                <a href="newCase.php" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-plus"></i> <br> New Case </a>
+                                <a href="cases.php" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-list"></i> <br> Cases </a>
+                                <a href="jobs.php" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-tasks"></i> <br> Jobs </a>
                                 <a href="#help" class="btn btn-primary col-sm-3" data-toggle="modal" data-target="#help"> <i class="glyphicon glyphicon-question-sign"></i> <br> Help</a>
                             </div>
                             <hr>
@@ -148,12 +148,12 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>45</td>
-                                                <td>2.45%</td>
+                                                <td>Profhacks Lobby</td>
+                                                <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
                                             </tr>
                                             <tr>
-                                                <td>289</td>
-                                                <td>56.2%</td>
+                                                <td>Times Square</td>
+                                                <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
                                             </tr>
                                         </tbody>
                                     </table>
