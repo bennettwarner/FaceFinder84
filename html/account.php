@@ -70,7 +70,7 @@
                                     <h4>Profile</h4>
                                 </div>
                                 <div class="panel-body">
-                                    <form action="accountupdate.php" method="get"  id="edit-profile" class="form-horizontal">
+                                    <form action="accountupdate.php" method="post"  id="edit-profile" class="form-horizontal">
                                     <center>
                                     <table cellspacing="10">
                                       <tr>
@@ -80,15 +80,15 @@
                                       <tr>        <td></td><td align="right"><p class="help-block">Your username cannot be changed.</p><br></td></tr>
                                       <tr>
                                                 <td align="right"><label for="email">Email Address &nbsp; &nbsp; &nbsp;</label><br><br></td>
-                                                <td><input type="text" class="input-large" name="email" placeholder="<?php echo getEmail(); ?>"><br><br></td>
+                                                <td><input type="text" class="input-large" name="email" id="email" placeholder="<?php echo getEmail(); ?>"><br><br></td>
                                       </tr>
                                       <tr>
                                                 <td align="right"><label for="password1">Password &nbsp; &nbsp; &nbsp;</label><br><br></td>
-                                                <td><input type="password" class="input-medium" name="password1" placeholder="password" required><br><br></td>
+                                                <td><input type="password" class="input-medium" name="password1" id="password1" placeholder="password" required><br><br></td>
                                       </tr>
                                       <tr>
                                                 <td align="right"><label for="password2">Confirm &nbsp; &nbsp; &nbsp;</label><br><br></td>
-                                                <td><input type="password" class="input-medium" name="password2" placeholder="password" required><br><br></td>
+                                                <td><input type="password" class="input-medium" name="password2" id="password2" placeholder="password" required><br><br></td>
                                       </tr>
                                                 <br />
                                       <tr>
