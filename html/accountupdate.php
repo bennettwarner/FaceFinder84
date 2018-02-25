@@ -11,19 +11,19 @@ else {
 }
 }
 
-print_r($_POST);
+print_r($_GET);
 
-  echo $_POST['password1'];
-  if(!empty($_POST['password1']) && !empty($_POST['password2']) && $_POST['password1']!=$_POST['password2']){
+  echo $_GET['password1'];
+  if(!empty($_GET['password1']) && !empty($_GET['password2']) && $_GET['password1']!=$_GET['password2']){
     header('Location: ./account.php?mismatch');
   }
   else {
     global $conn;
 
-    $pw_hash = password_hash($_POST['password1'], PASSWORD_DEFAULT);
+    $pw_hash = password_hash($_GET['password1'], PASSWORD_DEFAULT);
     $id = getID();
 
-    $sql = "UPDATE `members` SET `password` = '".$pw_hash."'".emailUpdate($_POST['email'])." WHERE members.id = '".$id."'";
+    $sql = "UPDATE `members` SET `password` = '".$pw_hash."'".emailUpdate($_GET['email'])." WHERE members.id = '".$id."'";
 echo $sql;
     $conn->query($sql);
     $conn->close();
