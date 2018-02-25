@@ -139,6 +139,18 @@
                                 </div>
                                 <!--/panel-body-->
                             </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4> Raw Output</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <p><?php
+                                    $output = shell_exec('face_recognition faces/ '.getSourceIMG($_GET['id']));
+                                    echo "<pre>$output</pre>";
+                                    ?></p>
+                                </div>
+                                <!--/panel-body-->
+                            </div>
                             <!--/panel-->
                             <!--/panel-->
                         </div>
