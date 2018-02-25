@@ -90,29 +90,22 @@
                     <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>
                     <hr>
                     <div class="row">
-                      <form action="addcase.php" method="post"  enctype="multipart/form-data" name="case">
                         <div class="col-md-10">
-                            <div class="input-group">
-                                <span class="input-group-addon">Case Title:</span>
-                                <input type="text" class="form-control" name="title" placeholder="">
+                            <div class="input-group"> 
+                                <span class="input-group-addon">Case Title:</span> 
+                                <input type="text" class="form-control" placeholder=""> 
                             </div>
                             <br>
-                            <div class="form-group">
-                                <label class="control-label" for="formInput33">Notes</label>
-                                <textarea class="form-control" rows="3" name="notes" id="formInput33"></textarea>
+                            <div class="form-group"> 
+                                <label class="control-label" for="formInput33">Notes</label>                                 
+                                <textarea class="form-control" rows="3" id="formInput33"></textarea>
                             </div>
-                            <br>
-                            <div class="form-group">
-                                <label class="control-label" for="formInput33">Know Image of Suspect</label>
-                            <input type="file" name="fileToUpload" id="fileToUpload">
-                          </div>
                             <br>
                             <center>
-                                <button type="button" class="btn btn-primary">Submit</button>
-                                <button type="button" class="btn btn-default">Cancel</button>
-                            </centercenter>
+                                <button type="button" class="btn btn-primary">Label</button>
+                                <button type="button" class="btn btn-default">Label</button>                                 
+                            </centercenter>                             
                         </div>
-                      </form>
                         <!-- center left-->
                         <!--/col-->
                         <!--/col-span-6-->
