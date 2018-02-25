@@ -13,7 +13,7 @@ else {
 
 print_r($_POST);
 
-  echo "<h1>Form lololol</h1>";
+  echo "$_POST['password1']";
   if(!empty($_POST['password1']) && !empty($_POST['password2']) && $_POST['password1']!=$_POST['password2']){
     header('Location: ./account.php?mismatch');
   }
