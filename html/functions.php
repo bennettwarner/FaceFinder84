@@ -23,6 +23,16 @@ function getID() {
   $conn->close();
     }
 
+function getTitle($title) {
+  global $conn;
+  $sql = "SELECT `title` FROM `cases` WHERE `id` = '".$title."' LIMIT 1";
+  $result = $conn->query($sql);
+  while($row = $result->fetch_assoc()) {
+          return $row["title"];
+  }
+  $conn->close();
+    }
+
 function dashboardCasesTable() {
   global $conn;
   $sql = "SELECT * FROM `cases`  ORDER  BY id DESC LIMIT 10";
