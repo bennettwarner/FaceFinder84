@@ -59,7 +59,7 @@
                                 <a href="/dash.php"><i class="glyphicon glyphicon-home"></i> Home</a>
                             </li>
                             <li>
-                                <a href="#"><i class="glyphicon glyphicon-search"></i> New Case <span class="badge badge-info"></span></a>
+                                <a href="#"><i class="glyphicon glyphicon-plus"></i> New Case <span class="badge badge-info"></span></a>
                             </li>
                             <li>
                                 <a href="#"><i class="glyphicon glyphicon-list"></i> Active Cases</a>
@@ -72,7 +72,7 @@
                                 <a href="#"><i class="glyphicon glyphicon-flag"></i> Audit</a>
                             </li>
                             <li>
-                                <a href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;Account</a>
+                                <a href="account.php"><i class="glyphicon glyphicon-user"></i> Account</a>
                             </li>
                             <li></li>
                             <li>
@@ -95,9 +95,9 @@
                         <div class="col-md-6">
                             <div class="btn-group btn-group-justified">
                                 <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-plus"></i> <br> New Case </a>
-                                <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-cloud"></i> <br> Cloud</a>
-                                <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-cog"></i> <br> Settings </a>
-                                <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-question-sign"></i> <br> Help</a>
+                                <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-list"></i> <br> Cases </a>
+                                <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-tasks"></i> <br> Jobs </a>
+                                <a href="#help" class="btn btn-primary col-sm-3" data-toggle="modal" data-target="#help"> <i class="glyphicon glyphicon-question-sign"></i> <br> Help</a>
                             </div>
                             <hr>
                             <div class="panel panel-default">
@@ -155,7 +155,7 @@
                                     <h4>Welcome</h4>
                                 </div>
                                 <div class="panel-body">
-                                    <p>Welcome to FF84™. To create a new case use the "New Case" button, for further assistance please use the </p>
+                                    <p>Welcome to FF84™. To create a new case use the "New Case" button, for further assistance please use the Help button.</p>
                                 </div>
                             </div>
                             <div class="panel panel-default">
@@ -202,26 +202,26 @@
             </div>
         </div>
         <!-- /Main -->
-        <div class="modal" id="addWidgetModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Add Widget</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>Add a widget stuff here..</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#" data-dismiss="modal" class="btn">Close</a>
-                        <a href="#" class="btn btn-primary">Save changes</a>
-                    </div>
-                </div>
-                <!-- /.modal-content -->
-            </div>
-            <!-- /.modal-dalog -->
-        </div>
-        <!-- /.modal -->
+        <!-- Modal -->
+<div class="modal fade" id="help" tabindex="-1" role="dialog" aria-labelledby="Help" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">FaceFinder Help</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
         <!-- script references -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

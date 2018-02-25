@@ -1,7 +1,5 @@
 <?php require "login/loginheader.php"; ?>
-<?php require "./functions.php"; ?>
-
-
+<?php require "functions.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +25,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="./dash.php">FaceFinder 84</a>
+                    <a class="navbar-brand" href="./dash.php">FaceFinder 84™</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -61,34 +59,37 @@
                         <div class="col-md-8">
                           <?php
                           if (isset($_GET['mismatch'])) {
-
                             echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Password fields must match</div><div id="returnVal" style="display:none;">false</div>';
+                        }
+                        if (isset($_GET['success'])) {
+                          echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Account info updated successfully!</div><div id="returnVal" style="display:none;">false</div>';
+                      }
 
-                        }?>
+                        ?>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4>Profile</h4>
                                 </div>
                                 <div class="panel-body">
-                                    <form id="edit-profile" class="form-horizontal" method="post" action="./accountupdate.php">
+                                    <form action="accountupdate.php" method="post"  id="edit-profile" class="form-horizontal">
                                     <center>
                                     <table cellspacing="10">
                                       <tr>
                                             <td align="right">  <label for="username">Username &nbsp; &nbsp; &nbsp;</label></td>
-                                            <td>  <input type="text" class="input-medium disabled" id="username" value="<?php echo getUsername(); ?>" disabled></td>
+                                            <td>  <input type="text" class="input-medium disabled" name="username" value="<?php echo getUsername(); ?>" disabled></td>
                                       </tr>
                                       <tr>        <td></td><td align="right"><p class="help-block">Your username cannot be changed.</p><br></td></tr>
                                       <tr>
                                                 <td align="right"><label for="email">Email Address &nbsp; &nbsp; &nbsp;</label><br><br></td>
-                                                <td><input type="text" class="input-large" id="email" placeholder="<?php echo getEmail(); ?>"><br><br></td>
+                                                <td><input type="text" class="input-large" name="email" id="email" placeholder="<?php echo getEmail(); ?>"><br><br></td>
                                       </tr>
                                       <tr>
                                                 <td align="right"><label for="password1">Password &nbsp; &nbsp; &nbsp;</label><br><br></td>
-                                                <td><input type="password" class="input-medium" id="password1" placeholder="password" required><br><br></td>
+                                                <td><input type="password" class="input-medium" name="password1" id="password1" placeholder="password" required><br><br></td>
                                       </tr>
                                       <tr>
                                                 <td align="right"><label for="password2">Confirm &nbsp; &nbsp; &nbsp;</label><br><br></td>
-                                                <td><input type="password" class="input-medium" id="password2" placeholder="password" required><br><br></td>
+                                                <td><input type="password" class="input-medium" name="password2" id="password2" placeholder="password" required><br><br></td>
                                       </tr>
                                                 <br />
                                       <tr>
