@@ -60,7 +60,7 @@ function caseCount($user) {
     while($row = $result->fetch_assoc()) {
       echo "<li><a href='case.php?id=".$row['id']."'>Case ".$row['id']."</a></li>";
     }
-  //  $conn->close();
+    $conn->close();
         }
 
   function auditTable() {
@@ -73,7 +73,7 @@ function caseCount($user) {
             echo "<td>
             <div class='btn-group>'
               <button type='button' class='btn btn-default dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-                "." Cases <span class='caret'></span>
+                ".caseCount($row['username'])." Cases <span class='caret'></span>
               </button>
               <ul class='dropdown-menu'>
                 ".caseDropdown($row['username'])."
