@@ -40,7 +40,7 @@ function inProgress($id) {
   while($row = $result->fetch_assoc()) {
           return $row["complete"];
   }
-  $conn->close();
+  //$conn->close();
     }
 
     function match($id) {
