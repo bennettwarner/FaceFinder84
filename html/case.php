@@ -144,10 +144,7 @@
                                     <h4> Raw Output</h4>
                                 </div>
                                 <div class="panel-body">
-                                    <p><?php
-                                    $output = shell_exec('face_recognition faces/ '.getSourceIMG($_GET['id']));
-                                    echo "$output";
-                                    ?></p>
+                                    <p></p>
                                 </div>
                                 <!--/panel-body-->
                             </div>
