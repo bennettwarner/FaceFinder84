@@ -94,7 +94,7 @@
                                                 <br />
                                       <tr>
                                                 <td align="right"><button type="submit" class="btn btn-primary">Save</button> &nbsp; &nbsp; &nbsp;<br></td>
-                                                <td><a href="#" class="btn" role="button">Cancel</a></td>
+                                                <td><a href="account.php" class="btn" role="button">Cancel</a></td>
                                       </tr>
                                     </table>
                                     <br>
