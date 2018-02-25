@@ -1,5 +1,5 @@
 <?php require "login/loginheader.php"; ?>
-<?php require "./functions.php"; ?>
+<?php include "login/dbconfig.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -30,7 +30,7 @@
                     <ul class="nav navbar-nav navbar-right">
 
                         <li class="dropdown">
-                            <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> <?php echo getUsername(); ?> <span class="caret"></span></a>
+                            <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> <?php echo $_SESSION['username'] ?> <span class="caret"></span></a>
                             <ul id="g-account-menu" class="dropdown-menu" role="menu">
                                 <li>
                                     <a href="./account.php">Account Settings</a>
@@ -59,7 +59,7 @@
                                 <a href="/dash.php"><i class="glyphicon glyphicon-home"></i> Home</a>
                             </li>
                             <li>
-                                <a href="#"><i class="glyphicon glyphicon-plus"></i> New Case <span class="badge badge-info"></span></a>
+                                <a href="#"><i class="glyphicon glyphicon-search"></i> New Case <span class="badge badge-info"></span></a>
                             </li>
                             <li>
                                 <a href="#"><i class="glyphicon glyphicon-list"></i> Active Cases</a>
@@ -72,7 +72,7 @@
                                 <a href="#"><i class="glyphicon glyphicon-flag"></i> Audit</a>
                             </li>
                             <li>
-                                <a href="account.php"><i class="glyphicon glyphicon-user"></i> Account</a>
+                                <a href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;Account</a>
                             </li>
                             <li></li>
                             <li>
@@ -95,9 +95,9 @@
                         <div class="col-md-6">
                             <div class="btn-group btn-group-justified">
                                 <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-plus"></i> <br> New Case </a>
-                                <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-list"></i> <br> Cases </a>
-                                <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-tasks"></i> <br> Jobs </a>
-                                <a href="#help" class="btn btn-primary col-sm-3" data-toggle="modal" data-target="#help"> <i class="glyphicon glyphicon-question-sign"></i> <br> Help</a>
+                                <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-cloud"></i> <br> Cloud</a>
+                                <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-cog"></i> <br> Settings </a>
+                                <a href="#" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-question-sign"></i> <br> Help</a>
                             </div>
                             <hr>
                             <div class="panel panel-default">
@@ -155,7 +155,7 @@
                                     <h4>Welcome</h4>
                                 </div>
                                 <div class="panel-body">
-                                    <p>Welcome to FF84™. To create a new case use the "New Case" button, for further assistance please use the Help button.</p>
+                                    <p>Welcome to FF84™. To create a new case use the "New Case" button, for further assistance please use the </p>
                                 </div>
                             </div>
                             <div class="panel panel-default">
@@ -202,99 +202,26 @@
             </div>
         </div>
         <!-- /Main -->
-        <!-- Modal -->
-<div class="modal fade" id="help" tabindex="-1" role="dialog" aria-labelledby="Help" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">FaceFinder Help</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div id="accordion">
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
-                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  New Case
-                </button>
-              </h5>
+        <div class="modal" id="addWidgetModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Add Widget</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Add a widget stuff here..</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" data-dismiss="modal" class="btn">Close</a>
+                        <a href="#" class="btn btn-primary">Save changes</a>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
             </div>
-
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-              <div class="card-body">
-                This creates a new "case" in the system, a "case" is used to initiate a search for the suspect.
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingTwo">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Active Cases
-                </button>
-              </h5>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-              <div class="card-body">
-                This is a directory of all current cases active in your system.
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingThree">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Jobs
-                </button>
-              </h5>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-              <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingFour">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  Audit
-                </button>
-              </h5>
-            </div>
-            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-              <div class="card-body">
-                This is a who initiated which searches to create an accountability trail.
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingFive">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                  Account
-                </button>
-              </h5>
-            </div>
-            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-              <div class="card-body">
-                In this section you can manage and update your account details like email and password.
-              </div>
-            </div>
-          </div>
-
+            <!-- /.modal-dalog -->
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+        <!-- /.modal -->
         <!-- script references -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
