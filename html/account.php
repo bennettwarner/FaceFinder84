@@ -13,9 +13,9 @@ else {
 
 
 $passwordError = false;
-if(isset($_POST['submit']))
+if(isset($_POST['password1']))
 {
-  echo "<h1>Form</h1>";
+  echo "<h1>Form lololol</h1>";
   if(!empty($_POST['password1']) && !empty($_POST['password2']) && $_POST['password1']!=$_POST['password2']){
     $passwordError = true;
   }
