@@ -66,8 +66,6 @@ function matchTable($id) {
       echo "<td><a href='".substr($row['img_path'], 5)."'>Match</a></td>";
       echo "<tr>";
     }
-    foreach ($matches as &$value) {
-    }
     $conn->close();
       }
 
