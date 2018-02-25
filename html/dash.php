@@ -72,7 +72,7 @@
                                 <a href="#"><i class="glyphicon glyphicon-flag"></i> Audit</a>
                             </li>
                             <li>
-                                <a href="account.php"><i class="glyphicon glyphicon-user"></i>&nbsp;Account</a>
+                                <a href="account.php"><i class="glyphicon glyphicon-user"></i> Account</a>
                             </li>
                             <li></li>
                             <li>
@@ -203,7 +203,7 @@
         </div>
         <!-- /Main -->
         <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="help" aria-hidden="true">
+<div class="modal fade" id="help" tabindex="-1" role="dialog" aria-labelledby="Help" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
