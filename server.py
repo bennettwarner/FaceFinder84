@@ -2,7 +2,6 @@
 
 from http.server import BaseHTTPRequestHandler
 import socketserver
-import base64
 import facecut
 
 
@@ -18,13 +17,11 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
 
         raw_post_body = post_data.decode('utf-8')
 
-        with open('test.jpg', 'wb') as file:
-            file.write(base64.b64decode(raw_post_body.split()[-2]))
-
-        facecut.process_image(post_data)
+        facecut.process_image(count)
 
 
 def run():
+    # Set up and start server
     httpd = socketserver.TCPServer(('', 1337), HTTPRequestHandler)
     httpd.serve_forever()
 
