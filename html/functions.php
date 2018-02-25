@@ -33,6 +33,17 @@ function getTitle($title) {
   $conn->close();
     }
 
+function getNotes($id) {
+  global $conn;
+  $sql = "SELECT `notes` FROM `cases` WHERE `id` = '".$id."' LIMIT 1";
+  $result = $conn->query($sql);
+  while($row = $result->fetch_assoc()) {
+          return $row["notes"];
+  }
+  $conn->close();
+    }
+
+
 function dashboardCasesTable() {
   global $conn;
   $sql = "SELECT * FROM `cases`  ORDER  BY id DESC LIMIT 10";
