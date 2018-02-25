@@ -108,8 +108,8 @@
                           </div>
                             <br>
                             <center>
-                                <button type="button" class="btn btn-primary">Submit</button>
-                                <button type="button" class="btn btn-default">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <a href="account.php" class="btn" role="button">Cancel</a>
                             </centercenter>
                         </div>
                       </form>
