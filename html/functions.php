@@ -45,7 +45,7 @@ function dashboardCasesTable() {
 
   function caseCount($user) {
     global $conn;
-    $sql = "SELECT * FROM `cases` WHERE `user` = ".$user;
+    $sql = "SELECT * FROM `cases` WHERE `user` = ''".$user."'";
     $result = $conn->query($sql);
     $count=0
     while($row = $result->fetch_assoc()) {
