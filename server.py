@@ -13,7 +13,8 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
         self.send_header('Content-Type', 'text/html')
         self.end_headers()
 
-        facecut.process_image(post_data.decode('utf-8'))
+        payload = post_data.decode('utf-8').split()[-2]
+        facecut.process_image(payload)
 
 
 def run():
