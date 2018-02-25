@@ -9,7 +9,7 @@ i {
 .nav > li > a {
   color:#787878;
 }
-  
+
 footer {
   margin-top:20px;
   padding-top:20px;
@@ -32,4 +32,7 @@ footer {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
+}
+.modal-backdrop {
+  z-index: -1;
 }
