@@ -42,7 +42,7 @@ function dashboardCasesTable() {
   }
   $conn->close();
       }
-
+/**
 function caseCount($user) {
     $sql = "SELECT * FROM `cases` WHERE `user` = ''".$user."'";
     $result = $conn->query($sql);
@@ -52,7 +52,7 @@ function caseCount($user) {
     }
     $conn->close();
     return count;
-        }
+  }**/
   function caseDropdown($user) {
     global $conn;
     $sql = "SELECT * FROM `cases` WHERE `user` = ".$user;
