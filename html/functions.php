@@ -138,7 +138,7 @@ function dashboardCasesTable() {
     $sql = "INSERT INTO `cases` (`id`, `title`, `notes`, `img_path`, `user`, `creation_time`, `complete`) VALUES (NULL, '".$title."', '".$notes."', '".$img_path."', '".$user."', CURRENT_TIMESTAMP, '0');
 ";
     $result = $conn->query($sql);
-    $conn->close();
+    //$conn->close();
         }
 
   function jobsTable() {
