@@ -47,7 +47,7 @@
         <!-- /Header -->
         <!-- Main -->
         <?php
-        if (!inProgress()) {
+        if (!inProgress($_GET['id'])) {
           echo '<div class="alert alert-warning alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Search is still in progress! Check jobs to see status.</div><div id="returnVal" style="display:none;">false</div>';
       }?>
 
