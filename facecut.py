@@ -27,7 +27,7 @@ def process_image(encoded_file):
     db.close()
 
     file = open(image_path, 'wb')
-    file.write(base64.b64decode(encoded_file)
+    file.write(base64.b64decode(encoded_file))
     file.close()
 
     image = face_recognition.load_image_file(file)
