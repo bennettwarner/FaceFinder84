@@ -28,14 +28,32 @@ function dashboardCasesTable() {
   $sql = "SELECT * FROM `cases`  ORDER  BY id DESC LIMIT 5";
   $result = $conn->query($sql);
   while($row = $result->fetch_assoc()) {
+    if ($row['complete']==0) {
+      $status="in progress";
+    }
+    else{
+      $status=matchCount($row['id']);
+    }
           echo "<tr>";
-          echo "<td>".$row['title']."</td>";
+          echo "<td><a href='cases.php?id=".$row['id']."'>".$row['title']."</td>";
           echo "<td>".$row['user']."</td>";
-          echo "<td>".$row['complete']."</td>";
+          echo "<td>".$status."</td>";
           echo "<tr>";
   }
   $conn->close();
       }
+
+  function matchCount($id) {
+    global $conn;
+    $sql = "SELECT * FROM `matches` WHERE `case_num` = ".$id;
+    $result = $conn->query($sql);
+    $count = 0;
+    while($row = $result->fetch_assoc()) {
+      $count++;
+        }
+    $conn->close();
+    return $count;
+        }
 
 function getEmail() {
   global $conn;
