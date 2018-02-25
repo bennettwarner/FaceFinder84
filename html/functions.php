@@ -35,7 +35,7 @@ function dashboardCasesTable() {
       $status=matchCount($row['id']);
     }
           echo "<tr>";
-          echo "<td><a href='cases.php?id=".$row['id']."'>".$row['title']."</td>";
+          echo "<td><a href='case.php?id=".$row['id']."'>".$row['title']."</td>";
           echo "<td>".$row['user']."</td>";
           echo "<td>".$status."</td>";
           echo "<tr>";
@@ -57,7 +57,7 @@ function dashboardCasesTable() {
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
             echo "<tr>";
-            echo "<td><a href='cases.php?id=".$row['id']."'>".$row['title']."</td>";
+            echo "<td><a href='case.php?id=".$row['id']."'>".$row['title']."</td>";
             echo "<td>".$row['user']."</td>";
             echo "<td>".$row['creation_time']."</td>";
             echo "<td><div class='loader'></div></td>";
@@ -77,6 +77,15 @@ function dashboardCasesTable() {
     $conn->close();
     return $count;
         }
+
+  function newCaseID(){
+    global $conn;
+    $sql = "SELECT `id` FROM `cases` ORDER  BY id DESC LIMIT 1";
+    $result = $conn->query($sql);
+    while($row = $result->fetch_assoc()) {
+      return $row["id"];        }
+    $conn->close();
+  }
 
 function getEmail() {
   global $conn;

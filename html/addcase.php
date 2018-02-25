@@ -2,9 +2,10 @@
 <?php require "./functions.php"; ?>
 <?php
 $target_dir = "uploads/";
-$target_file = $target_dir .time()."-".basename($_FILES["fileToUpload"]["name"]);
+$target_file = $target_dir .newCaseID().".jpg");
+$original_file = $target_dir .basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+$imageFileType = strtolower(pathinfo($original_file,PATHINFO_EXTENSION));
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
@@ -27,9 +28,9 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
     $uploadOk = 0;
 }
 // Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+if($imageFileType != "jpg" && $imageFileType != "jpeg"
  ) {
-    echo "Sorry, only JPG, JPEG, & PNG files are allowed.";
+    echo "Sorry, only JPG, & JPEG files are allowed.";
     $uploadOk = 0;
 }
 // Check if $uploadOk is set to 0 by an error
