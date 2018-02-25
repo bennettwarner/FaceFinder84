@@ -49,7 +49,7 @@ function dashboardCasesTable() {
     $result = $conn->query($sql);
     $count=0
     while($row = $result->fetch_assoc()) {
-      count++;
+      $count++;
     }
     $conn->close();
     return count;
