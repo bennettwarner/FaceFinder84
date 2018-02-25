@@ -1,8 +1,6 @@
 <?php require "login/loginheader.php"; ?>
 <?php require "functions.php"; ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -61,10 +59,13 @@
                         <div class="col-md-8">
                           <?php
                           if (isset($_GET['mismatch'])) {
-
                             echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Password fields must match</div><div id="returnVal" style="display:none;">false</div>';
+                        }
+                        if (isset($_GET['success'])) {
+                          echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Account info updated successfully!</div><div id="returnVal" style="display:none;">false</div>';
+                      }
 
-                        }?>
+                        ?>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4>Profile</h4>
