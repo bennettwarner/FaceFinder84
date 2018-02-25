@@ -102,7 +102,7 @@ if(isset($_POST['password1']))
                                     <h4>Profile</h4>
                                 </div>
                                 <div class="panel-body">
-                                    <form id="edit-profile" class="form-horizontal" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                                    <form id="edit-profile" class="form-horizontal" method="post" action="./account.php">
                                     <center>
                                     <table cellspacing="10">
                                       <tr>
