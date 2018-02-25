@@ -28,7 +28,6 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-
                         <li class="dropdown">
                             <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> <?php echo getUsername(); ?> <span class="caret"></span></a>
                             <ul id="g-account-menu" class="dropdown-menu" role="menu">
@@ -88,82 +87,31 @@
                 <!-- /col-3 -->
                 <div class="col-sm-9">
                     <!-- column 2 -->
-                    <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>
+                    <a href="jobs.php"><strong><i class="glyphicon glyphicon-dashboard"></i> Active Jobs</strong></a>
                     <hr>
                     <div class="row">
                         <!-- center left-->
-                        <div class="col-md-6">
-                            <div class="btn-group btn-group-justified">
-                                <a href="newCase.php" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-plus"></i> <br> New Case </a>
-                                <a href="cases.php" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-list"></i> <br> Cases </a>
-                                <a href="jobs.php" class="btn btn-primary col-sm-3"> <i class="glyphicon glyphicon-tasks"></i> <br> Jobs </a>
-                                <a href="#help" class="btn btn-primary col-sm-3" data-toggle="modal" data-target="#help"> <i class="glyphicon glyphicon-question-sign"></i> <br> Help</a>
-                            </div>
-                            <hr>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4><span class="glyphicon glyphicon-th-list"></span> Recent Cases</h4>
-                                </div>
-                                <div class="panel-body">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Case</th>
-                                                <th>Submitted By</th>
-                                                <th>Start Time</th>
-                                                <th>Status</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php jobsTable()?>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!--/panel-body-->
+                        <div class="col-md-12">
+                            <div class="panel-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Case</th>
+                                            <th>Submitted By</th>
+                                            <th>Start Time</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php jobsTable()?>
+                                    </tbody>
+                                </table>
                             </div>
                             <!--/panel-->
                             <!--tabs-->
                             <!--/tabs-->
                         </div>
                         <!--/col-->
-                        <div class="col-md-6">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4>Welcome</h4>
-                                </div>
-                                <div class="panel-body">
-                                    <p>Welcome to FF84™. To create a new case use the "New Case" button, for further assistance please use the Help button.</p>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4><span class="glyphicon glyphicon-facetime-video"></span> Camera Feeds</h4>
-                                </div>
-                                <div class="panel-body">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Location</th>
-                                                <th>Status</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Profhacks Lobby</td>
-                                                <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Times Square</td>
-                                                <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!--/panel-body-->
-                            </div>
-                            <!--/panel-->
-                            <!--/panel-->
-                        </div>
                         <!--/col-span-6-->
                     </div>
                     <!--/row-->
@@ -180,30 +128,40 @@
         </div>
         <!-- /Main -->
         <!-- Modal -->
-<div class="modal fade" id="help" tabindex="-1" role="dialog" aria-labelledby="Help" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">FaceFinder Help</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <ul>
-          <li><b>New Case</b> - This creates a new "case" in the system, a "case" is used to initiate a search for the suspect.</li>
-          <li><b>Active Cases</b> - This is a directory of all current cases active in your system.</li>
-          <li><b>Jobs</b> - This is where you can check the progress of running searches</li>
-          <li><b>Audit</b> - This is a who initiated which searches to create an accountability trail.</li>
-          <li><b>Account</b> - In this section you can manage and update your account details like email and password.</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="modal fade" id="help" tabindex="-1" role="dialog" aria-labelledby="Help" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">FaceFinder Help</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>
+                                <b>New Case</b> - This creates a new "case" in the system, a "case" is used to initiate a search for the suspect.
+                            </li>
+                            <li>
+                                <b>Active Cases</b> - This is a directory of all current cases active in your system.
+                            </li>
+                            <li>
+                                <b>Jobs</b> - This is where you can check the progress of running searches
+                            </li>
+                            <li>
+                                <b>Audit</b> - This is a who initiated which searches to create an accountability trail.
+                            </li>
+                            <li>
+                                <b>Account</b> - In this section you can manage and update your account details like email and password.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- script references -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
