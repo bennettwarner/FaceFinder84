@@ -1,5 +1,3 @@
-# Author: Ellis Madagan
-
 from http.server import BaseHTTPRequestHandler
 import socketserver
 import facecut
@@ -15,9 +13,7 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
         self.send_header('Content-Type', 'text/html')
         self.end_headers()
 
-        raw_post_body = post_data.decode('utf-8')
-
-        facecut.process_image(count)
+        facecut.process_image(post_data.decode('utf-8'))
 
 
 def run():

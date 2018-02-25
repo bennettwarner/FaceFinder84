@@ -18,7 +18,7 @@ def process_image(encoded_file):
     conn.execute('SELECT COUNT(*) FROM faces')
     count = conn.fetchone()[0]
 
-    image_path = 'images/{}.jpg'.format(count)
+    image_path = 'temp/temp.jpg'.format(count)
     location = 'Rowan University'
 
     query = 'INSERT INTO faces(img_path, location) VALUES ("{0}", "{1}")'.format(image_path, location)
@@ -26,8 +26,9 @@ def process_image(encoded_file):
     db.commit()
     db.close()
 
-    with open(image_path, 'wb') as file:
-        file.write(base64.b64decode(encoded_file.split()[-2]))
+    file = open(image_path, 'wb')
+    file.write(base64.b64decode(encoded_file.split()[-2]))
+    file.close()
 
     image = face_recognition.load_image_file(file)
     face_locations = face_recognition.face_locations(image)
