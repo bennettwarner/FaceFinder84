@@ -1,5 +1,5 @@
 <?php require "login/loginheader.php"; ?>
-<?php require "./functions.php"; ?>
+<?php require "functions.php"; ?>
 
 
 
