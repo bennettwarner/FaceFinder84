@@ -2,7 +2,7 @@
 <?php require "./functions.php"; ?>
 <?php
 $target_dir = "uploads/";
-$target_file = $target_dir .newCaseID().".jpg");
+$target_file = $target_dir .newCaseID().".jpg";
 $original_file = $target_dir .basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($original_file,PATHINFO_EXTENSION));
