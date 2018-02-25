@@ -11,7 +11,7 @@ else {
 }
 }
 
-
+print_r($_POST);
 $passwordError = false;
 if(isset($_POST['password1']))
 {
