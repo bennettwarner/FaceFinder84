@@ -1,11 +1,10 @@
 # FaceFinder84™
 
 ## About the project:
-This project is a security surveillance program designed to used pythons innate facial recognition software to create a database
-of captured faces to be searched through by law enforcement to identify and track down criminals. The program is web-based off of a 
-digital ocean ubuntu virtual machine. 
+This project is a security surveillance program designed to used deep learing facial recognition to create a database
+of captured faces to be searched through by law enforcement to identify and track down criminals. The idea is for it to be fed via security cameras. The program is designed for 16.04 LTS
 
-**Here is the address of the program:**
+**Here is a demo of the application:**
 [FF84™ Webpage](https://ff84.wcupa.network)
 
 ## How to use FF84™
@@ -34,14 +33,18 @@ that the suspect was detected.
 > This function does the comparison of the face entered on case creation across all faces in the database, then 
 > outputs whether or not there was a match and the timestamps and locations for each positive match
 
+
+### Project Requirements
+PHP
+Python3 
+pip3
+pillow
+face_recognition
+
 ### Project Developers
 * Alex Levanthal
 * Bennett Warner
 * Ellis Madagan
 * Gavin Macko
 
-### Liscencing
-FaceFinder84™ is a trademarked product under the licensing of Soy Boys Inc.®, any unlicensed or unauthorized use of this 
-software will result in swift and severe legal action against the perpetratior
-
-**remember**, if you have a face, we can find you.
+**remember**, if you have a face, we will find you.
