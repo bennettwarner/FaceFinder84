@@ -100,7 +100,7 @@
                                     <h4>Search Source Photo</h4>
                                 </div>
                                 <div class="panel-body">
-                                    <p>Welcome to FF84™. To create a new case use the "New Case" button, for further assistance please use the Help button.</p>
+                                    <img src="./<?php echo getSourceIMG($_GET['id'])?>"  style="width:100%;">
                                 </div>
                             </div>
                             <!--/panel-->

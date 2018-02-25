@@ -23,6 +23,16 @@ function getID() {
   $conn->close();
     }
 
+function getSourceIMG($id) {
+  global $conn;
+  $sql = "SELECT `img_path` FROM `cases` WHERE `id` = '".$id."' LIMIT 1";
+  $result = $conn->query($sql);
+  while($row = $result->fetch_assoc()) {
+          return $row["img_path"];
+  }
+  $conn->close();
+    }
+
 function getTitle($title) {
   global $conn;
   $sql = "SELECT `title` FROM `cases` WHERE `id` = '".$title."' LIMIT 1";
