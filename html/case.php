@@ -83,7 +83,7 @@
                 <!-- /col-3 -->
                 <div class="col-sm-9">
                     <!-- column 2 -->
-                    <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> Case <?php echo $_GET['id']?></strong></a>
+                    <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> Case <?php echo $_GET['id']." - ".getTitle($_GET['id'])?></strong></a>
                     <hr>
                     <div class="row">
                         <!-- center left-->

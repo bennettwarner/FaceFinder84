@@ -50,7 +50,7 @@ function dashboardCasesTable() {
           echo "<td>".$status."</td>";
           echo "<tr>";
   }
-  $conn->close();
+  //$conn->close();
       }
 
   function fullCasesTable() {
