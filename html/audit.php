@@ -108,13 +108,12 @@
                                     <table class="table table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Officer</th>
-                                                <th>Matches</th>
+                                                <th>User</th>
+                                                <th>Cases</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php dashboardCasesTable()?>
+                                            <?php auditTable()?>
                                         </tbody>
                                     </table>
                                 </div>
