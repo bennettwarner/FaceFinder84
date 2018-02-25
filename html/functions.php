@@ -23,6 +23,20 @@ function getID() {
   $conn->close();
     }
 
+function dashboardCasesTable() {
+  global $conn;
+  $sql = "SELECT * FROM `cases`  ORDER  BY id DESC LIMIT 5";
+  $result = $conn->query($sql);
+  while($row = $result->fetch_assoc()) {
+          echo "<tr>";
+          echo "<td>".$row['title']."</td>";
+          echo "<td>".$row['user']."</td>";
+          echo "<td>".$row['complete']."</td>";
+          echo "<tr>";
+  }
+  $conn->close();
+      }
+
 function getEmail() {
   global $conn;
   $sql = "SELECT email FROM members WHERE username = '".$_SESSION['username']."' LIMIT 1";

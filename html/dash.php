@@ -110,35 +110,11 @@
                                             <tr>
                                                 <th>Name</th>
                                                 <th>Officer</th>
-                                                <th>Status</th>
+                                                <th>Matches</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>45</td>
-                                                <td>2.45%</td>
-                                                <td>Direct</td>
-                                            </tr>
-                                            <tr>
-                                                <td>289</td>
-                                                <td>56.2%</td>
-                                                <td>Referral</td>
-                                            </tr>
-                                            <tr>
-                                                <td>98</td>
-                                                <td>25%</td>
-                                                <td>Type</td>
-                                            </tr>
-                                            <tr>
-                                                <td>..</td>
-                                                <td>..</td>
-                                                <td>..</td>
-                                            </tr>
-                                            <tr>
-                                                <td>..</td>
-                                                <td>..</td>
-                                                <td>..</td>
-                                            </tr>
+                                            <?php dashboardCasesTable()?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -223,7 +199,6 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
