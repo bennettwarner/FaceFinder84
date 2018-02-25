@@ -3,7 +3,7 @@
 from http.server import BaseHTTPRequestHandler
 import socketserver
 import base64
-import facecut
+#import facecut
 
 
 class HTTPRequestHandler(BaseHTTPRequestHandler):
