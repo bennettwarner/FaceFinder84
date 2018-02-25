@@ -20,7 +20,7 @@ function getID() {
   while($row = $result->fetch_assoc()) {
           return $row["id"];
   }
-  $conn->close();
+  //$conn->close();
     }
 
 function getSourceIMG($id) {
@@ -30,7 +30,7 @@ function getSourceIMG($id) {
   while($row = $result->fetch_assoc()) {
           return $row["img_path"];
   }
-  $conn->close();
+  //$conn->close();
     }
 
 function inProgress($id) {
@@ -40,7 +40,7 @@ function inProgress($id) {
   while($row = $result->fetch_assoc()) {
           return $row["complete"];
   }
-  //$conn->close();
+  ////$conn->close();
     }
 
     function match($id) {
@@ -52,7 +52,7 @@ function inProgress($id) {
                array_push($matches, $row['face_id']);
       }
       return $matches;
-      $conn->close();
+      //$conn->close();
         }
 
 function matchTable($id) {
@@ -66,7 +66,7 @@ function matchTable($id) {
       echo "<td><a href='".substr($row['img_path'], 5)."'>Match</a></td>";
       echo "<tr>";
     }
-    //$conn->close();
+    ////$conn->close();
       }
 
 function getTitle($title) {
@@ -76,7 +76,7 @@ function getTitle($title) {
   while($row = $result->fetch_assoc()) {
           return $row["title"];
   }
-  $conn->close();
+  //$conn->close();
     }
 
 function getNotes($id) {
@@ -86,7 +86,7 @@ function getNotes($id) {
   while($row = $result->fetch_assoc()) {
           return $row["notes"];
   }
-  $conn->close();
+  //$conn->close();
     }
 
 
@@ -107,7 +107,7 @@ function dashboardCasesTable() {
           echo "<td>".$status."</td>";
           echo "<tr>";
   }
-  //$conn->close();
+  ////$conn->close();
       }
 
   function fullCasesTable() {
@@ -127,7 +127,7 @@ function dashboardCasesTable() {
             echo "<td>".$status."</td>";
             echo "<tr>";
     }
-    $conn->close();
+    //$conn->close();
         }
 
 
@@ -136,7 +136,7 @@ function dashboardCasesTable() {
     $sql = "INSERT INTO `cases` (`id`, `title`, `notes`, `img_path`, `user`, `creation_time`, `complete`) VALUES (NULL, '".$title."', '".$notes."', '".$img_path."', '".$user."', CURRENT_TIMESTAMP, '0');
 ";
     $result = $conn->query($sql);
-    //$conn->close();
+    ////$conn->close();
         }
 
   function jobsTable() {
@@ -151,7 +151,7 @@ function dashboardCasesTable() {
             echo "<td><div class='loader'></div></td>";
             echo "<tr>";
     }
-    $conn->close();
+    //$conn->close();
         }
 
   function matchCount($id) {
@@ -162,7 +162,7 @@ function dashboardCasesTable() {
     while($row = $result->fetch_assoc()) {
       $count++;
         }
-    $conn->close();
+    //$conn->close();
     return $count;
         }
 
@@ -172,7 +172,7 @@ function dashboardCasesTable() {
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
       return ($row["id"]+1);        }
-    $conn->close();
+    //$conn->close();
   }
 
 function getEmail() {
@@ -182,6 +182,6 @@ function getEmail() {
   while($row = $result->fetch_assoc()) {
           return $row["email"];
   }
-  $conn->close();
+  //$conn->close();
     }
 ?>
