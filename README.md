@@ -12,12 +12,12 @@ digital ocean ubuntu virtual machine.
 FF84 is a simple to understand program user side; to begin the search through the database a user simply must use either of the 
 *New Case* links \(Pictured Below\)
 
-![New case image](profhacks2018/screenshots/ff84 scrnsht 1.jpg)
+![New case image](https://github.com/bennettwarner/profhacks2018/blob/master/screenshots/ff84%20scrnsht%201.png)
 
 Then the user must input the image of the criminal for comparison \(pictured below\)against the database, the program will then 
 output whether or not there was a match as well as the times and locations that the suspect was detected.
 
-![Case creation screen](profhacks2018/screenshots/ff84 scrnsht 2.jpg)
+![Case creation screen](https://github.com/bennettwarner/profhacks2018/blob/master/screenshots/ff84%20scrnsht%202.png)
 
 
 ### Project Functions
