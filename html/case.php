@@ -139,16 +139,6 @@
                                 </div>
                                 <!--/panel-body-->
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4> Raw Output</h4>
-                                </div>
-                                <div class="panel-body">
-                                    <p></p>
-                                </div>
-                                <!--/panel-body-->
-                            </div>
-                            <!--/panel-->
                             <!--/panel-->
                         </div>
                         <!--/col-span-6-->
