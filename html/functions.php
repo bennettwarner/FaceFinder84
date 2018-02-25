@@ -55,12 +55,12 @@ function caseCount($user) {
   }**/
   function caseDropdown($user) {
     global $conn;
-    $sql = "SELECT * FROM `cases` WHERE `user` = ".$user;
+    $sql = "SELECT * FROM `cases` WHERE `user` = '".$user."'";
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
       echo "<li><a href='case.php?id=".$row['id']."'>Case ".$row['id']."</a></li>";
     }
-    $conn->close();
+  //  $conn->close();
     return count;
         }
 
@@ -77,6 +77,7 @@ function caseCount($user) {
                 "." Cases <span class='caret'></span>
               </button>
               <ul class='dropdown-menu'>
+              e
                 ".caseDropdown($row['username'])."
               </ul>
             </div>
