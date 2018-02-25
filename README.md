@@ -1,4 +1,4 @@
-#FaceFinder84™
+# FaceFinder84™
 
 ## About the project:
 This project is a security surveillance program designed to used pythons innate facial recognition software to create a database
@@ -12,12 +12,12 @@ digital ocean ubuntu virtual machine.
 FF84 is a simple to understand program user side; to begin the search through the database a user simply must use either of the 
 *New Case* links \(Pictured Below\)
 
-THIS IS WHERE THE FIRST SCREENSHOT GOES
+![New case image](/screenshots/ff84 scrnsht 1.jpg)
 
 Then the user must input the image of the criminal for comparison \(pictured below\)against the database, the program will then 
 output whether or not there was a match as well as the times and locations that the suspect was detected.
 
-THIS IS WHERE THE SECOND SCREENSHOT GOES
+![Case creation screen](/screenshots/ff84 scrnsht 2.jpg)
 
 
 ### Project Functions
@@ -29,13 +29,12 @@ THIS IS WHERE THE SECOND SCREENSHOT GOES
 
 ### Project Developers
 * Alex Levanthal
-* Bennet Warner
-* Ellis probably has a last name too
+* Bennett Warner
+* Ellis Madagan
 * Gavin Macko
 
 ### Liscencing
-FaceFinder84™ is a trademarked product under the liscencing of Soy Boys Inc.®, any unliscenced or unauthorized use of this 
+FaceFinder84™ is a trademarked product under the licensing of Soy Boys Inc.®, any unlicensed or unauthorized use of this 
 software will result in swift and severe legal action against the perpetratior
 
-**remember**, we can *always* find you.
-
+**remember**, if you have a face, we can find you.
