@@ -1,4 +1,4 @@
-# FaceFinder84™
+# FaceFinder84™   (Profhacks2018)
 
 ## About the project:
 This project is a security surveillance program designed to used deep learing facial recognition to create a database
