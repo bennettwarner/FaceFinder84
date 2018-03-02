@@ -10,7 +10,7 @@ import os
 
 DB_HOST = '159.89.235.137'
 DB_USER = 'ff84'
-DB_PASSWORD = 'xm6829bs'
+DB_PASSWORD = ''
 DB_NAME = 'ff84'
 
 def process_image(encoded_file):
@@ -42,4 +42,3 @@ def process_image(encoded_file):
 
     db.commit()
     db.close()
-
