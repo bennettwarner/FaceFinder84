@@ -8,10 +8,10 @@ import MySQLdb as mysql
 import base64
 import os
 
-DB_HOST = '159.89.235.137'
-DB_USER = 'ff84'
+DB_HOST = ''
+DB_USER = ''
 DB_PASSWORD = ''
-DB_NAME = 'ff84'
+DB_NAME = ''
 
 def process_image(encoded_file):
 
