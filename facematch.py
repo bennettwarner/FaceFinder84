@@ -7,10 +7,10 @@ import time
 import MySQLdb as mysql
 import face_recognition
 
-DB_HOST = '159.89.235.137'
-DB_USER = 'ff84'
-DB_PASSWORD = 'xm6829bs'
-DB_NAME = 'ff84'
+DB_HOST = ''
+DB_USER = ''
+DB_PASSWORD = ''
+DB_NAME = ''
 
 # Set up database connection
 db = mysql.connect(host=DB_HOST, user=DB_USER, passwd=DB_PASSWORD, db=DB_NAME)
