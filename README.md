@@ -4,6 +4,8 @@
 This project is a security surveillance program designed to used deep learing facial recognition to create a database
 of captured faces to be searched through by law enforcement to identify and track down criminals. The idea is for it to be fed via security cameras. The program is designed for 16.04 LTS
 
+![Screenshot](https://github.com/bennettwarner/profhacks2018/blob/master/screenshots/ff84%20scrnsht%203.png)
+
 ## How to use FF84™
 FF84 is a simple to understand program user side; to begin the search through the database a user simply must use either of the 
 *New Case* links \(Pictured Below\)
